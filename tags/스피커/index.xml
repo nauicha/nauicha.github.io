@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>스피커 on nasoru</title>
+    <link>https://nasoru.com/tags/%EC%8A%A4%ED%94%BC%EC%BB%A4/</link>
+    <description>Recent content in 스피커 on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 11 Jul 2022 16:43:15 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/%EC%8A%A4%ED%94%BC%EC%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>헤드셋 스피커 기본 사운드 장치 전환 Audio Device Switcher</title>
+      <link>https://nasoru.com/posts/audio-device-switcher/</link>
+      <pubDate>Mon, 11 Jul 2022 16:43:15 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/audio-device-switcher/</guid>
+      <description>핫키를 지정해서 헤드셋, 스피커를 간단하게 전환할 수 있는 방법을 찾아보던 중 마이크로소프트 스토어에게 찾게 된 앱이다. 마이크로소프트 스토어 링크 ms-windows-store://pdp/?ProductId=9N71NH5H6T7K Audio Device Switcher 출력장치뿐만 아니라 녹음장치도 설정할 수 있다. 핫키를 지정할 때 Ctrl 또는 Alt 를 무조건 포함해야 핫키를 지정할 수 있다. Shift 는 지정할 수 없다. 나는 핫키를 마우스 매크로로 등록해서 무선마우스 배터리 확인하는 버튼에 지정해두었다.</description>
+    </item>
+    
+  </channel>
+</rss>

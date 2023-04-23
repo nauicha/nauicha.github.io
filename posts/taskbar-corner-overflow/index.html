@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="작업표시줄 모서리에 오버플로 아이콘을 선택할 때 이미 제거된 프로그램의 아이콘을 제거하는 방법이다.">
+<meta property="og:description"  content="작업표시줄 모서리에 오버플로 아이콘을 선택할 때 이미 제거된 프로그램의 아이콘을 제거하는 방법이다." />
+<meta property="og:title" content="윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/taskbar-corner-overflow/" />
+<meta property="og:site_name" content="윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기" />
+
+<meta property="article:published_time" content="2022-07-19 00:24:54 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기</h1>
+        <time datetime="2022-07-19T00:24:54&#43;0900">2022년 7월 19일 화요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/windows">windows</a></li>
+        
+        </ul>
+        
+        
+
+
+
+
+<figure>
+  
+  <a href="/posts/taskbar-corner-overflow/corner.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/taskbar-corner-overflow/corner_hu3c7c0946432d1aa9e9184d77112faf28_10357_349x0_resize_q100_h2_box_3.webp"
+    width="349" height="221"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>모서리 오버플로 아이콘</figcaption>
+</figure>
+
+<p>윈도우에서는 작업표시줄 우측 모서리에 화살표안 메뉴로 숨겨지지 않는 아이콘을 설정할 수 있다. 나는 주로 트레이 아이콘 우클릭 메뉴를 자주 사용하는 프로그램이나 실행중인 것을 확인하는 용도로 사용한다.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/taskbar-corner-overflow/setting.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/taskbar-corner-overflow/setting_hu41bcb45a1ac159d4fa81387442c746bf_58839_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="536"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>작업 표시줄 설정</figcaption>
+</figure>
+
+<p>모서리 오버플로 아이콘을 사용하기 위한 작업 표시줄 설정.<br>
+이미 삭제된 프로그램의 아이콘이 남아있다. ex) OneDrive, Teams</p>
+<p>파일 <a class="link" href="corner_icon_cache.bat">다운로드</a> | <a class="link" href="https://www.elevenforum.com/t/reset-taskbar-corner-notification-icons-in-windows-11.247/" target="_blank" rel="noopener">출처</a></p>
+<details>
+<summary>corner_icon_cache.bat</summary>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch"><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: Created by: Shawn Brink</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: Created on: June 29, 2021</span>
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="c1">: Tutorial: https://www.elevenforum.com/t/reset-taskbar-corner-notification-icons-in-windows-11.247/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">regPath</span><span class="p">=</span>HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">regKey1</span><span class="p">=</span>IconStreams
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nv">regKey2</span><span class="p">=</span>PastIconsStream
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> The explorer process must be temporarily killed before deleting your taskbar corner overflow notification icons cache. 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> Please SAVE ALL OPEN WORK before continuing.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl">taskkill /IM explorer.exe /F
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">FOR</span> <span class="k">/F</span> <span class="s2">&#34;tokens=*&#34;</span> <span class="se">%%</span>a <span class="k">in</span> <span class="p">(</span><span class="s1">&#39;Reg Query &#34;</span><span class="nv">%regpath%</span><span class="s1">&#34; /v </span><span class="nv">%regkey1%</span><span class="s1"> ^| find /i &#34;</span><span class="nv">%regkey1%</span><span class="s1">&#34;&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="k">goto</span> <span class="nl">IconStreams</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> Registry key <span class="s2">&#34;IconStreams&#34;</span> already deleted.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">verify-PastIconsStream</span>
+</span></span><span class="line"><span class="cl"><span class="k">FOR</span> <span class="k">/F</span> <span class="s2">&#34;tokens=*&#34;</span> <span class="se">%%</span>a <span class="k">in</span> <span class="p">(</span><span class="s1">&#39;Reg Query &#34;</span><span class="nv">%regpath%</span><span class="s1">&#34; /v </span><span class="nv">%regkey2%</span><span class="s1"> ^| find /i &#34;</span><span class="nv">%regkey2%</span><span class="s1">&#34;&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="k">goto</span> <span class="nl">PastIconsStream</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> Registry key <span class="s2">&#34;PastIconsStream&#34;</span> already deleted.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">goto</span> <span class="nl">restart</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">IconStreams</span>
+</span></span><span class="line"><span class="cl">reg delete <span class="s2">&#34;</span><span class="nv">%regpath%</span><span class="s2">&#34;</span> /f /v <span class="s2">&#34;</span><span class="nv">%regkey1%</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">goto</span> <span class="nl">verify-PastIconsStream</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">PastIconsStream</span>
+</span></span><span class="line"><span class="cl">reg delete <span class="s2">&#34;</span><span class="nv">%regpath%</span><span class="s2">&#34;</span> /f /v <span class="s2">&#34;</span><span class="nv">%regkey2%</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">restart</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> You will need to restart the PC to finish resetting your taskbar corner overflow notification icons.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl">CHOICE /C:YN /M <span class="s2">&#34;Do you want to restart the PC now?&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span> <span class="k">ERRORLEVEL</span> <span class="mi">2</span> <span class="k">goto</span> <span class="nl">no</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span> <span class="k">ERRORLEVEL</span> <span class="mi">1</span> <span class="k">goto</span> <span class="nl">yes</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">no</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> Restarting explorer.... 
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span> Please remember to restart the PC later to finish resetting your taskbar corner overflow notification icons.
+</span></span><span class="line"><span class="cl"><span class="k">echo</span>.
+</span></span><span class="line"><span class="cl"><span class="k">start</span> explorer.exe
+</span></span><span class="line"><span class="cl"><span class="k">pause</span>
+</span></span><span class="line"><span class="cl"><span class="k">exit</span> /B
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">:</span><span class="nl">yes</span>
+</span></span><span class="line"><span class="cl">shutdown /r /f /t 00
+</span></span></code></pre></div></details>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/taskbar-corner-overflow/finish.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/taskbar-corner-overflow/finish_hudf7f0874bb3cb2249a39b67d455eec32_16415_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="360"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>corner_icon_cache.bat</figcaption>
+</figure>
+
+<p>실행 후 아무키만 누르면 작동하고 재시작 Y 입력. 재시작 후 모서리 오버플로 아이콘이 없다면 해당 프로그램이 처음 시작될 때 표시된다.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="80543e12181dd85fcf501aaa98850593">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="80543e12181dd85fcf501aaa98850593" 
+        data-page-url="https://nasoru.com/posts/taskbar-corner-overflow/"
+        data-page-title="윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/windows11-night-mode-error/">윈도우 야간모드 관련 오류 해결방법</a></li>
+        
+        <li><a href="/posts/rmstart/">윈도우 작업 관리자에서 시작프로그램 완전히 제거하기</a></li>
+        
+        <li><a href="/posts/windows11-patch/">윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음</a></li>
+        
+        <li><a href="/posts/ear-trumpet/">윈도우10 간단하게 볼륨믹서 기능 사용하기 EarTrumpet</a></li>
+        
+        <li><a href="/posts/windows10-sftp-drive/">윈도우10 SFTP 네트워크 드라이브에 연결하기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

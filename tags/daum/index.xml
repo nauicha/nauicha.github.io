@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>daum on nasoru</title>
+    <link>https://nasoru.com/tags/daum/</link>
+    <description>Recent content in daum on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Wed, 24 Aug 2022 08:48:38 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/daum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>팟플레이어 동시에 창 여러개 플레이 중복 실행하기</title>
+      <link>https://nasoru.com/posts/multi-potplayer/</link>
+      <pubDate>Wed, 24 Aug 2022 08:48:38 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/multi-potplayer/</guid>
+      <description>창 여러개 열기 팟플레이어 기본 설정은 팟플레이어가 이미 실행중일 때 새로운 파일을 열면 새로운 창이 열리지 않고 이전에 실행중인 창에서 재생된다. 2개의 동영상을 동시에 실행하고 싶을 때 매우 답답한 기능이다. 환경설정 환경설정 f5 기본 &amp;gt; 프로그램 중복실행을 여러 재생기 동시 실행 허용으로 적용할 수 있다.</description>
+    </item>
+    
+  </channel>
+</rss>

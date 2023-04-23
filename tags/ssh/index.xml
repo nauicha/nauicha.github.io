@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on nasoru</title>
+    <link>https://nasoru.com/tags/ssh/</link>
+    <description>Recent content in ssh on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 15 Jan 2022 01:40:53 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode Remote SSH 원격서버 연결하기</title>
+      <link>https://nasoru.com/posts/vscode-remote-ssh/</link>
+      <pubDate>Sat, 15 Jan 2022 01:40:53 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/vscode-remote-ssh/</guid>
+      <description>Remote SSH 비주얼스튜디오코드 VSCode에서 SSH 원격 접속 방법. 탐색기 + 에디터 + 터미널 사용가능. Ctrl + Shift + P 로 ssh 검색 또는 창 왼쪽 아래 초록색 &amp;gt;&amp;lt; 아이콘 사용. Remote-SSH:Connect to Host&amp;hellip; &amp;gt; Configure SSH Hosts&amp;hellip; nasoru는 미리 만들어둔 세션. 기본으로 선택할 수 있는 config 경로는 C:\Users\사용자이름\.ssh\config # Read more about SSH config files: https://linux.die.net/man/5/ssh_config Host 호스트 세션 별칭 HostName 호스트 이름 (IP주소) User 사용자 이름 Port 포트 지정 (기본 22) IdentityFile 개인키 저장 파일 위치 Host node-vm HostName &amp;lt;vm address&amp;gt; User sana Port 5522 IdentityFile ~/.ssh/id_node_vm 세션 여러</description>
+    </item>
+    
+  </channel>
+</rss>

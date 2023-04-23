@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jupyter notebook on nasoru</title>
+    <link>https://nasoru.com/tags/jupyter-notebook/</link>
+    <description>Recent content in jupyter notebook on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 15 May 2022 17:32:30 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/jupyter-notebook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OMP: Error #15 The kernel appears to have died. It will restart automatically. 해결 방법</title>
+      <link>https://nasoru.com/posts/omp-error-15/</link>
+      <pubDate>Sun, 15 May 2022 17:32:30 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/omp-error-15/</guid>
+      <description>오류 출력 OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized. OMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://www.intel.com/software/products/support/. 주피터 노트북 콘솔로그에 오류가 출력되면서 종료된다. Kernel Restarting The kernel appears to have died. It will restart automatically. 해결 방법 import os os.environ[&amp;#39;KMP_DUPLICATE_LIB_OK&amp;#39;]=&amp;#39;True&amp;#39; 코드 맨위에 추가.</description>
+    </item>
+    
+    <item>
+      <title>주피터 노트북 Jupyter Notebook 시작 작업폴더 지정하기</title>
+      <link>https://nasoru.com/posts/jupyter-notebook-startdir/</link>
+      <pubDate>Tue, 10 May 2022 02:16:28 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/jupyter-notebook-startdir/</guid>
+      <description>명령어로 주피터노트북을 실행할 때 시작폴더 지정하기 powershell 이나 anaconda prompt 에서 jupyter notebook 명령어로 실행할 때 jupyter notebook --generate-config C:\Users\사용자이름.jupyter 위치에 jupyter_notebook_config.py 설정파일 생성. c.NotebookApp.notebook_dir = &amp;lsquo;D:/경로/경로&amp;rsquo; 파일안에서 주석처리 되어있는 c.NotebookApp.notebook_dir 를 찾아 수정. 주피터 노트북 바로가기로 실행할 때 시작폴더 지정하기 아나콘다로 가상환경별로 주피터노트북 설치했을 때 파일경로 확인 파일 경로 확인후 바로가기 파일 속성 속성 대상 값 젤 뒤에 &amp;quot;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chrome on nasoru</title>
+    <link>https://nasoru.com/tags/chrome/</link>
+    <description>Recent content in chrome on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 15 Apr 2022 20:01:51 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>크롬 커서 깜빡임 캐럿 브라우징 해제하기</title>
+      <link>https://nasoru.com/posts/chrome-cursor/</link>
+      <pubDate>Fri, 15 Apr 2022 20:01:51 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/chrome-cursor/</guid>
+      <description>캐럿 브라우징 캐럿 브라우징은 마우스 대신 키보드를 이용해 페이지를 탐색할 수 있게 도와주는 기능이다. page up, page down, home, end, tab, 방향키 등&amp;hellip; 하지만 이 기능을 사용하면 크롬 브라우저 사용 중에 텍스트 영역이 아닌 곳에서도 텍스트 커서가 깜빡인다. 비활성화 토글 단축키로는 F7 또는 설정페이지 고급 &amp;gt; 접근성 &amp;gt; 텍스트 커서로 페이지 탐색 을 해제한다.</description>
+    </item>
+    
+    <item>
+      <title>구글 크롬에서 다크모드 사용하기</title>
+      <link>https://nasoru.com/posts/chrome-dark-mode/</link>
+      <pubDate>Mon, 21 Feb 2022 16:04:40 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/chrome-dark-mode/</guid>
+      <description>크롬 UI 다크모드 적용하기 윈도우10에서 크롬을 다크모드로 바꾸는 방법들이다. 아래 방법들은 크롬 UI 를 어둡게 해주는 것이고 웹 컨텐츠를 다크모드로 사용하려면 웹 페이지에서 다크모드를 지원하거나 또 다른 방법이 필요하다. 다크모드 적용 1. 윈도우 설정으로 다크모드 바탕화면 우클릭 개인설정에서 선택. 사용자 지정으로 선택되어있지만 기본 앱 모드 선택이 뜨지 않는 경우는 다른 옵션으로 선택 후 다시 사용자 지정으로 선택하면 된다. 개인설정 &amp;gt; 색 &amp;gt; 기본 앱 모드 선택 유튜</description>
+    </item>
+    
+    <item>
+      <title>안드로이드에서 크롬 개발자 도구를 사용하는 방법</title>
+      <link>https://nasoru.com/posts/android-chrome-inspect/</link>
+      <pubDate>Wed, 17 Nov 2021 09:53:08 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/android-chrome-inspect/</guid>
+      <description>아래 방법은 안드로이드에서 크롬 개발자도구를 사용하는 것이 아니라 안드로이드를 PC에 연결해서 크롬 개발자도구를 원격으로 사용하는 방법. 안드로이드와 연결할 PC가 필요하다. USB 디버깅 설정, USB 파일 전송 안드로이드 크롬에서 크롬 개발자 도구를 사용하기 위해 설정 – 휴대전화 정보 – 소프트웨어 정보 – 빌드 번호를 여러 번 눌러주면 안드로이드 개발자 옵션이 활성화 된다. 개발자 옵션에서 USB 디버깅 모드를 사용으로 바꿔준다. 컴퓨터에 USB로 연결 Minimal ADB and Fastboot 설치 Minimal</description>
+    </item>
+    
+  </channel>
+</rss>

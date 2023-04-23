@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sftp on nasoru</title>
+    <link>https://nasoru.com/tags/sftp/</link>
+    <description>Recent content in sftp on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 24 Jan 2022 03:45:42 +0000</lastBuildDate><atom:link href="https://nasoru.com/tags/sftp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>윈도우10 SFTP 네트워크 드라이브에 연결하기</title>
+      <link>https://nasoru.com/posts/windows10-sftp-drive/</link>
+      <pubDate>Mon, 24 Jan 2022 03:45:42 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/windows10-sftp-drive/</guid>
+      <description>원격 디렉토리를 윈도우10 탐색기에 마운트하는 방법. VSCode Remote-SSH 확장은 서버에 VS Code server (최소 1GM RAM, 2 CPU cores 필요) 를 설치하는 대신 네트워크 드라이브로 마운트하고 간단한 작업폴더로 사용하기 위해 알아보았다. 터미널은 CMD OpenSSH 연결해서 사용. (윈도우10 선택적 기능에 포함된 OpenSSH 클라이언트 필요) ssh username@100.100.100.100 -i ~/.ssh/path ssh 키파일로 연결. -i ssh -L 1313:100.100.100.100:1313 username@100.100.100.100 -i ~/.ssh/path ssh 포트 1313 연결 추가. -L 준비물 설정 &amp;gt; 앱 및 기능 &amp;gt; 선택적 기능 OpenSSH 클라이언트 윈도우10 선택적 기능 WinFsp, https://github.com/billziss-gh/winfsp/releases/ SSHFS-Win, https://github.com/billziss-gh/sshfs-win/releases/ WinFsp, SSHFS-Win latest 최신버전 설치. 사</description>
+    </item>
+    
+  </channel>
+</rss>

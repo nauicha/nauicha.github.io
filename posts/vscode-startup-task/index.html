@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="비주얼스튜디오코드 작업 설정, 시작 실행.">
+<meta property="og:description"  content="비주얼스튜디오코드 작업 설정, 시작 실행." />
+<meta property="og:title" content="VSCode 작업폴더 시작시 명령 실행하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/vscode-startup-task/" />
+<meta property="og:site_name" content="VSCode 작업폴더 시작시 명령 실행하기" />
+
+<meta property="article:published_time" content="2022-01-29 06:14:35 &#43;0000 UTC" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>VSCode 작업폴더 시작시 명령 실행하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">VSCode 작업폴더 시작시 명령 실행하기</h1>
+        <time datetime="2022-01-29T06:14:35Z">2022년 1월 29일 토요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/vscode">vscode</a></li>
+        
+        </ul>
+        
+        <p>비주얼 스튜디오 코드 시작시 실행할 명령, 시작 작업 설정.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-startup-task/taskcfg.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-startup-task/taskcfg_hubdc5781f69e1bbee718b42fafaa2bbb9_21051_602x0_resize_q100_h2_box_3.webp"
+    width="602" height="438"
+    
+    alt="taskcfg.png"
+    >
+  </a>
+  
+</figure>
+
+<p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> 작업폴더에서 <code>.vscode/tasks.json</code> 파일 생성하기.</p>
+
+<h2 id="tasksjson-작업-설정하기" class="title">
+    <a href="#tasksjson-%ec%9e%91%ec%97%85-%ec%84%a4%ec%a0%95%ed%95%98%ea%b8%b0">tasks.json 작업 설정하기</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// See https://go.microsoft.com/fwlink/?LinkId=733558
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// for the documentation about the tasks.json format
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;2.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tasks&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;label&#34;</span><span class="p">:</span> <span class="s2">&#34;ssh&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;shell&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;ssh nasoru@xxx.xxx.xxx.xxx&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;windows&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;ssh nasoru@xxx.xxx.xxx.xxx&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;presentation&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;reveal&#34;</span><span class="p">:</span> <span class="s2">&#34;always&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;panel&#34;</span><span class="p">:</span> <span class="s2">&#34;new&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;clear&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;focus&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;runOptions&#34;</span><span class="p">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;runOn&#34;</span><span class="p">:</span> <span class="s2">&#34;folderOpen&#34;</span><span class="p">,</span>            
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li><code>command</code> 터미널 시작시 실행할 명령</li>
+<li><code>windows</code> 윈도우 운영체제 사용시 기본속성 대신 사용. 사용해야 정상작동해서 사용.</li>
+</ul>
+<p>presentaion 사용자 인터페이스에서 작업 출력이 처리되는 방식</p>
+<ul>
+<li><code>reveal</code> always(기본) | never | silent 통합 터미널 패널을 앞으로 가져올지 여부</li>
+<li><code>panel</code> shared 터미널 공유 | dedicated 터미널 재사용 | new 새로운 터미널 사용</li>
+<li><code>clear</code> true | false(기본) 이 작업이 실행되기 전에 터미널을 지울지 여부</li>
+<li><code>focus</code> true | false(기본) 터미널이 입력 포커스 여부</li>
+</ul>
+<p>runOptions 작업의 실행 동작을 지정</p>
+<ul>
+<li><code>runOn</code> default 명령으로만 실행 | folderOpen 자동으로 실행되도록 허용</li>
+</ul>
+<p><a class="link" href="https://code.visualstudio.com/docs/editor/tasks" target="_blank" rel="noopener">https://code.visualstudio.com/docs/editor/tasks</a></p>
+
+<h2 id="자동시작-안될-때" class="title">
+    <a href="#%ec%9e%90%eb%8f%99%ec%8b%9c%ec%9e%91-%ec%95%88%eb%90%a0-%eb%95%8c">자동시작 안될 때</a>
+</h2>
+
+<ol>
+<li>
+<p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> 로 <strong>Tasks: Manage Automatic Tasks in Folder</strong> 한국어로는 <strong>작업: 폴더에서 자동 작업 관리</strong> 자동 작업 허용 필요.</p>
+</li>
+<li>
+<p>작업 종료 팝업</p>
+</li>
+</ol>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-startup-task/taskrun.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-startup-task/taskrun_hu4e0bbcebf8de0a52c3cee048e5d47f33_12556_602x0_resize_q100_h2_box_3.webp"
+    width="602" height="261"
+    
+    alt="taskrun.png"
+    >
+  </a>
+  
+</figure>
+
+<p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> 로 Tasks:Run Task 아까 만든 작업 라벨이름 ssh 실행.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-startup-task/tasktmn.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-startup-task/tasktmn_hu253ed120f4348183470136804a1d4468_8547_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="249"
+    
+    alt="tasktmn.png"
+    >
+  </a>
+  
+</figure>
+
+<p>휴지통 아이콘으로 작업 종료시</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-startup-task/taskautostart.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-startup-task/taskautostart_hubbfc5cad801d6bdfcdc28f8ca216384c_6624_450x0_resize_q100_h2_box_3.webp"
+    width="450" height="128"
+    
+    alt="taskautostart.png"
+    >
+  </a>
+  
+</figure>
+
+<p>오른쪽 아래에 팝업으로 <strong>허용 및 실행</strong></p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="2855362eead7760ff5ebc65e9342e0e2">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="2855362eead7760ff5ebc65e9342e0e2" 
+        data-page-url="https://nasoru.com/posts/vscode-startup-task/"
+        data-page-title="VSCode 작업폴더 시작시 명령 실행하기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/vscode-start-page/">VSCode 이전 작업폴더 기억하지 않고 기본 시작화면 사용하기</a></li>
+        
+        <li><a href="/posts/vscode-remote-ssh/">VSCode Remote SSH 원격서버 연결하기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

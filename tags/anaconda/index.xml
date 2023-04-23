@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>anaconda on nasoru</title>
+    <link>https://nasoru.com/tags/anaconda/</link>
+    <description>Recent content in anaconda on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Mon, 15 Nov 2021 19:28:45 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/anaconda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>파이썬 아나콘다 anaconda 명령어 정리</title>
+      <link>https://nasoru.com/posts/anaconda-command/</link>
+      <pubDate>Mon, 15 Nov 2021 19:28:45 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/anaconda-command/</guid>
+      <description>아나콘다 명령어 정리 # 아나콘다 버전 확인 conda --version # 아나콘다 업데이트 conda update conda conda update -n base conda conda update --all pip install --upgrade pip # 아나콘다 가상환경 생성 conda create --name 가상환경이름 설치할패키지 conda create -n 가상환경이름 python=3.9 # 생성한 가상환경 리스트 확인 conda info --envs # 가상환경 활성화 conda activate 가상환경이름 # 가상환경 비활설화 conda deactivate # 가상환경 정보 conda info # 패키지 설치 conda install 패키지이름 # 설치된 패키지 리스트 확인 conda list # 가상환경 삭제 conda remove --name 가상환경이름 --all conda remove -n 가상환경이름 --all # 패키지만 삭제 conda remove -n 가상환경</description>
+    </item>
+    
+  </channel>
+</rss>

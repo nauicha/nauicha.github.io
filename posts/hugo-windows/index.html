@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="윈도우에서 hugo 설치하는 방법, 환경변수 설정.">
+<meta property="og:description"  content="윈도우에서 hugo 설치하는 방법, 환경변수 설정." />
+<meta property="og:title" content="윈도우10 hugo 블로그 만들기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/hugo-windows/" />
+<meta property="og:site_name" content="윈도우10 hugo 블로그 만들기" />
+
+<meta property="article:published_time" content="2021-02-01 20:33:40 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>윈도우10 hugo 블로그 만들기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">윈도우10 hugo 블로그 만들기</h1>
+        <time datetime="2021-02-01T20:33:40&#43;0900">2021년 2월 1일 월요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/hugo">hugo</a></li>
+        
+        <li><a href="https://nasoru.com/tags/windows">windows</a></li>
+        
+        </ul>
+        
+        
+
+
+
+
+<figure>
+  
+  <a href="/posts/hugo-windows/hugo.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/hugo-windows/hugo_hufc6d180083009eb38f361c579f942053_35521_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="292"
+    
+    alt="hugo.png"
+    >
+  </a>
+  
+</figure>
+
+<p>깃허브저장소를 이용해 깃허브페이지 또는 Netlify 로 호스팅을 하려면 <a class="link" href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git 윈도우버전</a>을 설치해야한다.</p>
+
+<h2 id="hugo-설치" class="title">
+    <a href="#hugo-%ec%84%a4%ec%b9%98">hugo 설치</a>
+</h2>
+
+<p><a class="link" href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener">Releases</a> 페이지에서 다운로드.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/hugo-windows/hugodir.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/hugo-windows/hugodir_hu261c4fde172b4823d0cd1a9d7a54f077_56610_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="377"
+    
+    alt="hugodir.png"
+    >
+  </a>
+  
+</figure>
+
+<p>다운받은 압축파일 폴더이름을 hugo로 바꾸어서 원하는 경로에 풀기. <code>C:\hugo\bin</code><br>
+버전 업데이트 할 때는 <code>hugo.exe</code> 파일만 바꿔주면 된다.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/hugo-windows/var.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/hugo-windows/var_hu7368aecbbab2f826946663014941a047_72167_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="350"
+    
+    alt="var.png"
+    >
+  </a>
+  
+</figure>
+
+<p>환경변수 편집은 설정 &gt; 시스템 &gt; 정보 &gt; 고급 시스템 설정</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/hugo-windows/hugosysdl.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/hugo-windows/hugosysdl_hu3526a57427658a6094dbf0fb3b8605f3_45735_495x0_resize_q100_h2_box_3.webp"
+    width="495" height="468"
+    
+    alt="hugosysdl.png"
+    >
+  </a>
+  
+</figure>
+
+<p>사용자 변수 Path 에 hugo 다운받은 경로를 새로 만들기로 추가한다.</p>
+
+<h2 id="설치-확인" class="title">
+    <a href="#%ec%84%a4%ec%b9%98-%ed%99%95%ec%9d%b8">설치 확인</a>
+</h2>
+
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/hugo-windows/hugocheck.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/hugo-windows/hugocheck_hu01ae3d229d7235ae1d6383edac96ef6d_25944_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="362"
+    
+    alt="hugocheck.png"
+    >
+  </a>
+  
+</figure>
+
+<p><code>hugo version</code> 으로 설치 확인할 수 있다.</p>
+
+<h3 id="프로젝트-시작하기" class="title">
+    <a href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0">프로젝트 시작하기</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site &lt;이름&gt;
+</span></span></code></pre></div><p>hugo 프로젝트 폴더 만들기</p>
+
+<h2 id="시작" class="title">
+    <a href="#%ec%8b%9c%ec%9e%91">시작</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> &lt;이름&gt;
+</span></span></code></pre></div><p>프로젝트 폴더안에서 시작</p>
+
+<h3 id="테마-적용하기" class="title">
+    <a href="#%ed%85%8c%eb%a7%88-%ec%a0%81%ec%9a%a9%ed%95%98%ea%b8%b0">테마 적용하기</a>
+</h3>
+
+<p>hugo는 기본테마가 없으므로 시작할때 테마를 적용하고 시작해야한다. <a class="link" href="https://themes.gohugo.io/" target="_blank" rel="noopener">hugo 공식홈페이지 테마 목록</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> themes
+</span></span><span class="line"><span class="cl">git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</span></span></code></pre></div><p>themes 폴더에 테마 저장소를 가져온다.</p>
+
+<h3 id="configtoml" class="title">
+    <a href="#configtoml">config.toml</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://nasoru.com/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;ko&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;ko&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;nasoru&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;ananke&#34;</span>
+</span></span></code></pre></div><p><code>config.toml</code> 에 <code>theme = &quot;테마(폴더)이름&quot;</code> 테마폴더에 저장된 테마의 폴더이름으로 저장</p>
+
+<h3 id="미리보기" class="title">
+    <a href="#%eb%af%b8%eb%a6%ac%eb%b3%b4%ea%b8%b0">미리보기</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></div><p><code>localhost:1313</code> 으로 실시간 로딩.</p>
+
+<h3 id="글쓰기" class="title">
+    <a href="#%ea%b8%80%ec%93%b0%ea%b8%b0">글쓰기</a>
+</h3>
+
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/hugo-windows/hugonew.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/hugo-windows/hugonew_hu1f3a2e82ce90d53f5bcb46a01a33e19c_20077_628x0_resize_q100_h2_box_3.webp"
+    width="628" height="369"
+    
+    alt="hugonew.png"
+    >
+  </a>
+  
+</figure>
+
+<p><code>archetypes/default.md</code> 파일이 기본으로 된 마크다운 파일이 만들어진다.<br>
+<code>draft: true</code> 는 지워야 미리보기나 빌드된 페이지가 보인다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new 경로/게시글주소/index.md
+</span></span></code></pre></div><p>hugo 글쓰기 content 폴더만에 생성된다.</p>
+
+<h3 id="웹사이트-빌드" class="title">
+    <a href="#%ec%9b%b9%ec%82%ac%ec%9d%b4%ed%8a%b8-%eb%b9%8c%eb%93%9c">웹사이트 빌드</a>
+</h3>
+
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/hugo-windows/hugobuild.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/hugo-windows/hugobuild_huacf9f67fc2dded44b85c8ac359060ef9_74581_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="445"
+    
+    alt="hugobuild.png"
+    >
+  </a>
+  
+</figure>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span></code></pre></div><p>hugo 사이트를 배포할 폴더 <code>public</code> 생성. 깃허브저장소로 public 폴더 연결하고 그 저장소를 깃허브페이지로 호스팅하면 된다.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="ae154383f0caf460b62706313e869aec">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="ae154383f0caf460b62706313e869aec" 
+        data-page-url="https://nasoru.com/posts/hugo-windows/"
+        data-page-title="윈도우10 hugo 블로그 만들기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/hugo-custom-shortcodes/">Hugo 사용자 정의 단축코드 Shortcode 만들기</a></li>
+        
+        <li><a href="/posts/hugo-page-variables/">Hugo 페이지 변수 정리</a></li>
+        
+        <li><a href="/posts/windows11-night-mode-error/">윈도우 야간모드 관련 오류 해결방법</a></li>
+        
+        <li><a href="/posts/taskbar-corner-overflow/">윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기</a></li>
+        
+        <li><a href="/posts/rmstart/">윈도우 작업 관리자에서 시작프로그램 완전히 제거하기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

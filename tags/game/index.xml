@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>game on nasoru</title>
+    <link>https://nasoru.com/tags/game/</link>
+    <description>Recent content in game on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 28 Aug 2022 13:34:08 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>로스트아크 모든 떠돌이 상인 위치</title>
+      <link>https://nasoru.com/posts/lostark-merchant/</link>
+      <pubDate>Sun, 28 Aug 2022 13:34:08 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/lostark-merchant/</guid>
+      <description>로스트아크 모든 대륙 모든 지역 떠돌이 상인 (떠상) 위치 한페이지로 모아보기 로스트아크 통합 디스코드 떠돌이 상인 찾기. Ctrl + F 로 지역명 검색. 떠상 알림에 뜨는 지역명을 보고 빠르게 검색하기 쉽게 페이지 하나에 모았다. 아르테미스 떠돌이 상인 벤 로그힐 안게모스 산 기슭 국경지대 유디아 떠돌이 상인 루카스 살란드 구릉지 오즈혼 구릉지 루테란 서부 떠돌이 상인 말론 자고라스 산 레이크바 메드리닉 수도원 빌브린 숲 격전의 평야 루테란 동부 떠돌이 상인 모리스, 버트 디오리카 평</description>
+    </item>
+    
+    <item>
+      <title>Raft 세계 월드 이름 바꾸는 방법 Hexedit</title>
+      <link>https://nasoru.com/posts/raft-world-rename/</link>
+      <pubDate>Sun, 03 Jul 2022 00:19:57 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/raft-world-rename/</guid>
+      <description>이 방법은 공식적인 방법이 아닙니다. 따라하시기전에 월드 파일 백업 부탁드립니다. Raft 월드 폴더 경로 월드이름을 바꾸는 방법은 월드 폴더 경로에서 폴더 이름, rgd 파일 이름을 바꾼다. 하지만 바뀐 월드로 들어가서 저장을 하게되면 저장된 월드는 원래 월드이름으로 저장한다. 변경한 월드이름으로 저장하는 방법 World/test/2000.00.00-00.00-Latest/test.rgd hexed 온라인헥스에디터 헥스에디터에서 위 경로에 있는 rgd 월드파일을 불러온다. hexed.it 이미지에서는 월드이름을 test로 만든 rgd 파일을 업로드하고 월드이름 test 를 검색</description>
+    </item>
+    
+    <item>
+      <title>Raft 1.0 정식출시 후 사용가능한 치트모음</title>
+      <link>https://nasoru.com/posts/raft-cheat/</link>
+      <pubDate>Thu, 23 Jun 2022 12:04:14 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/raft-cheat/</guid>
+      <description>최근에 Raft가 정식출시하면서 사용가능한 치트를 가져왔다. 아래 치트/모드들은 게임버전이 업데이트 되어도 적용이 되거나 업데이트가 빠르다. CheatEngine 필요한 치트 치트엔진 적용방법은 따로 설명X 구글검색. 명령어 입력창은 F10 CT 테이블 Update13 버전에서 파랗게 표시한 옵션들은 적용된다. CT파일 다운로드 SET_MAX_STATS 무적 NO_CRAFT_REQUIREMENT 망치 건설, 제작 재료 필요없음 (건축 필수) INSTANT_FISHING 즉시 낚시 INSTANT_COOKING 즉시 요리 UNLIMITED BATTERY 배터리 무제한 (v1 또는 v2 적용) ModLoader 필요한 치트 모드로더 설치, 모드 추가하는 방법 1. Item</description>
+    </item>
+    
+    <item>
+      <title>Raft 래프트 모드 적용하는 방법(치트)</title>
+      <link>https://nasoru.com/posts/raft-mod/</link>
+      <pubDate>Tue, 10 Aug 2021 04:01:44 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/raft-mod/</guid>
+      <description>Raft 스팀게임 숨겨진 업적 중에 비행기섬이랑 난파선섬 찾기를 할 때 사용. 모드로더를 실행하려면 스팀 Raft를 설치해야함. ModLoader 다운로드 Raft 모드로더 사이트에서 다운로드 받는다. 다운로드 받은 RMLLauncher.exe 을 실행하고 업데이트를 시켜준다. 모드로더 메인화면. UI가 잘려서 보임. 모드로더 Start 버튼으로 래프트를 실행해준다. 스팀에서 실행하면 안됨. 모드 적용하기 모드로더 홈페이지 모드목록 모드로더 홈페이지 ItemSpawner 이 글에서는 Raft ItemSpawner 라는 모드를 설치한다. 크롬으로 모드 페이지에</description>
+    </item>
+    
+  </channel>
+</rss>

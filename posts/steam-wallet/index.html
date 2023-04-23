@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="스팀 지갑은 5000원 단위로 충전할 수 있는데 특정 금액으로 충전하는 방법.">
+<meta property="og:description"  content="스팀 지갑은 5000원 단위로 충전할 수 있는데 특정 금액으로 충전하는 방법." />
+<meta property="og:title" content="Steam 스팀 지갑에 원하는 금액 충전하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/steam-wallet/" />
+<meta property="og:site_name" content="Steam 스팀 지갑에 원하는 금액 충전하기" />
+
+<meta property="article:published_time" content="2021-08-11 23:01:15 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>Steam 스팀 지갑에 원하는 금액 충전하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">Steam 스팀 지갑에 원하는 금액 충전하기</h1>
+        <time datetime="2021-08-11T23:01:15&#43;0900">2021년 8월 11일 수요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/steam">steam</a></li>
+        
+        </ul>
+        
+        <p><a class="link" href="https://store.steampowered.com/steamaccount/addfunds" target="_blank" rel="noopener">스팀 지갑 충전 페이지</a>에서는 5000원, 10000원, 25000원, 50000원, 100000원 단위로 잔액을 추가할 수 있는데 크롬 요소 검사를 이용해서 원하는 금액으로 바꿀 수 있다.</p>
+<blockquote>
+<p>최소 금액 5000원 이하로는 충전 불가능. <code>data-amount &gt; 500000</code></p>
+</blockquote>
+
+<h2 id="스팀-지갑-원하는-금액-충전방법" class="title">
+    <a href="#%ec%8a%a4%ed%8c%80-%ec%a7%80%ea%b0%91-%ec%9b%90%ed%95%98%eb%8a%94-%ea%b8%88%ec%95%a1-%ec%b6%a9%ec%a0%84%eb%b0%a9%eb%b2%95">스팀 지갑 원하는 금액 충전방법</a>
+</h2>
+
+<p>요소 검사를 이용할 수 있는 브라우저는 아마 다 될 것이다. 이 글은 크롬 브라우저로 설명.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/steam-wallet/wallet.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/steam-wallet/wallet_hud6aa0cde4033c3ec462586f10d4db868_183042_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="537"
+    
+    alt="wallet.png"
+    >
+  </a>
+  
+</figure>
+
+<p>충전 페이지에서 <strong>자금 추가</strong> 버튼을 우클릭 &gt; 검사 로 개발자 도구 열기</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/steam-wallet/devtool.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/steam-wallet/devtool_hu7fb03b3e4c4993c9a05682b349b188f4_162779_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="386"
+    
+    alt="devtool.png"
+    >
+  </a>
+  
+</figure>
+
+<p>표시된 빨간 박스 부분 <code>500000</code> 이 충전 금액이다. 5000원 + 00  ex) 11000원은 <code>data-amount=&quot;1100000&quot;</code>
+더블 클릭으로 원하는금액 + 00 으로 바꾸고 <strong>우클릭 요소검사를 한 버튼으로 자금 추가</strong>하기.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/steam-wallet/confirm.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/steam-wallet/confirm_hue692b850854e72c4906682af70777225_114454_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="391"
+    
+    alt="confirm.png"
+    >
+  </a>
+  
+</figure>
+
+<p>원하는 금액을 충전할 수 있는 페이지로 이동이 된다.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="8bc8f52ed0626ab260a8969e06a74c6e">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="8bc8f52ed0626ab260a8969e06a74c6e" 
+        data-page-url="https://nasoru.com/posts/steam-wallet/"
+        data-page-title="Steam 스팀 지갑에 원하는 금액 충전하기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/raft-world-rename/">Raft 세계 월드 이름 바꾸는 방법 Hexedit</a></li>
+        
+        <li><a href="/posts/raft-cheat/">Raft 1.0 정식출시 후 사용가능한 치트모음</a></li>
+        
+        <li><a href="/posts/propnight-fps-limit/">Propnight 프롭나이트 FPS 프레임 제한 없애기</a></li>
+        
+        <li><a href="/posts/raft-mod/">Raft 래프트 모드 적용하는 방법(치트)</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

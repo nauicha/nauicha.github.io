@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="AutoHotKey 스크립트 단축키로 기본 재생장치 변경.">
+<meta property="og:description"  content="AutoHotKey 스크립트 단축키로 기본 재생장치 변경." />
+<meta property="og:title" content="단축키(핫키)로 기본 재생장치 변경 스크립트 AHK | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/ahk-sound-switch/" />
+<meta property="og:site_name" content="단축키(핫키)로 기본 재생장치 변경 스크립트 AHK" />
+
+<meta property="article:published_time" content="2022-02-10 06:52:36 &#43;0000 UTC" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>단축키(핫키)로 기본 재생장치 변경 스크립트 AHK | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">단축키(핫키)로 기본 재생장치 변경 스크립트 AHK</h1>
+        <time datetime="2022-02-10T06:52:36Z">2022년 2월 10일 목요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/soundswitch">soundswitch</a></li>
+        
+        <li><a href="https://nasoru.com/tags/autohotkey">autohotkey</a></li>
+        
+        </ul>
+        
+        
+
+
+
+
+<figure>
+  
+  <a href="/posts/ahk-sound-switch/overlay.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/ahk-sound-switch/overlay_huf3b7730ce7994273a9f27f61c92719db_1829_341x0_resize_q100_h2_box_3.webp"
+    width="341" height="139"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>장치 변경 알림</figcaption>
+</figure>
+
+<p><a class="link" href="https://nasoru.com/posts/sound-switch-hotkey/" target="_blank" rel="noopener">이전 글 - SoundSwitch</a> 에서는 장치 변경알림 배너나 윈도우토스트알림이 전체화면에서 보이지 않는다.</p>
+
+<h2 id="오토핫키-스크립트" class="title">
+    <a href="#%ec%98%a4%ed%86%a0%ed%95%ab%ed%82%a4-%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8">오토핫키 스크립트</a>
+</h2>
+
+<ul>
+<li>+F10 은 <kbd>Shift</kbd> + <kbd>F10</kbd> 을 단축키로 설정. 다른 단축키로 설정하기 위한 <a class="link" href="http://autohotkeykr.sourceforge.net/docs/Hotkeys.htm" target="_blank" rel="noopener">관련 문서</a></li>
+<li><a class="link" href="https://www.nirsoft.net/utils/nircmd.html" target="_blank" rel="noopener">nircmd</a> 가 필요하다. 같은폴더에 저장.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="p">;</span><span class="err">#</span><span class="n">NoTrayIcon</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#Persistent
+</span></span></span><span class="line"><span class="cl"><span class="cp">#SingleInstance
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="o">^!</span><span class="n">BACKSPACE</span><span class="o">::</span>
+</span></span><span class="line"><span class="cl">	<span class="nl">toggle</span><span class="p">:</span><span class="o">=!</span><span class="n">toggle</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">toggle</span>	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Run</span> <span class="n">nircmdc</span> <span class="n">setdefaultsounddevice</span> <span class="s">&#34;스피커&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">soundToggleBox</span><span class="p">(</span><span class="s">&#34;스피커&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>	
+</span></span><span class="line"><span class="cl">	<span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Run</span> <span class="n">nircmdc</span> <span class="n">setdefaultsounddevice</span> <span class="s">&#34;Headset Earphone&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">soundToggleBox</span><span class="p">(</span><span class="s">&#34;Headset Earphone&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">Return</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">soundToggleBox</span><span class="p">(</span><span class="n">Device</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">IfWinExist</span><span class="p">,</span> <span class="n">soundToggleWin</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Gui</span><span class="p">,</span> <span class="n">destroy</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="n">Gui</span><span class="p">,</span> <span class="o">+</span><span class="n">ToolWindow</span> <span class="o">-</span><span class="n">Caption</span> <span class="o">+</span><span class="mh">0x20000</span> <span class="o">+</span><span class="n">alwaysontop</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Gui</span><span class="p">,</span> <span class="n">Margin</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Gui</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">C242424</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Gui</span><span class="p">,</span> <span class="n">Font</span><span class="p">,</span> <span class="n">S11</span> <span class="n">CFFFFFF</span><span class="p">,</span> <span class="err">맑은</span> <span class="err">고딕</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Gui</span> <span class="n">Add</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">m</span> <span class="n">w300</span> <span class="n">h70</span> <span class="o">+</span><span class="mh">0x201</span><span class="p">,</span> <span class="err">기본</span> <span class="err">장치</span> <span class="err">변경</span> <span class="o">-</span> <span class="o">%</span><span class="n">Device</span><span class="o">%</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SysGet</span><span class="p">,</span> <span class="n">screenx</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SysGet</span><span class="p">,</span> <span class="n">screeny</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">	<span class="nl">xpos</span><span class="p">:</span><span class="o">=</span><span class="p">(</span><span class="n">A_ScreenWidth</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">150</span>
+</span></span><span class="line"><span class="cl">	<span class="nl">ypos</span><span class="p">:</span><span class="o">=</span><span class="n">screeny</span><span class="o">-</span><span class="mi">150</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Gui</span><span class="p">,</span> <span class="n">Show</span><span class="p">,</span> <span class="n">NoActivate</span> <span class="n">x</span><span class="o">%</span><span class="n">xpos</span><span class="o">%</span> <span class="n">y</span><span class="o">%</span><span class="n">ypos</span><span class="o">%</span> <span class="n">w300</span> <span class="n">h70</span><span class="p">,</span> <span class="n">soundToggleWin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">SetTimer</span><span class="p">,</span><span class="n">soundToggleClose</span><span class="p">,</span> <span class="mi">2000</span>
+</span></span><span class="line"><span class="cl">	<span class="n">WinSet</span><span class="p">,</span> <span class="n">Region</span><span class="p">,</span> <span class="mi">0</span><span class="o">-</span><span class="mi">0</span> <span class="n">w350</span> <span class="n">h30</span> <span class="n">R30</span><span class="o">-</span><span class="mi">30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nl">soundToggleClose</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SetTimer</span><span class="p">,</span><span class="n">soundToggleClose</span><span class="p">,</span> <span class="n">off</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Gui</span><span class="p">,</span> <span class="n">destroy</span>
+</span></span><span class="line"><span class="cl"><span class="n">Return</span>
+</span></span></code></pre></div><p>exe 파일로 만들어서 포맷할 때마다 항상 작업스케줄러, 로그온 시 실행으로 등록. nircmdc.exe .</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="1fbf49af818c52e89c8bb7b69ab1fc76">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="1fbf49af818c52e89c8bb7b69ab1fc76" 
+        data-page-url="https://nasoru.com/posts/ahk-sound-switch/"
+        data-page-title="단축키(핫키)로 기본 재생장치 변경 스크립트 AHK"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/audio-device-switcher/">헤드셋 스피커 기본 사운드 장치 전환 Audio Device Switcher</a></li>
+        
+        <li><a href="/posts/sound-switch-hotkey/">단축키(핫키)로 사운드 기본장치 변경하기 SoundSwitch</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

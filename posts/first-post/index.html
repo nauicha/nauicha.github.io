@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="블로그 기록">
+<meta property="og:description"  content="블로그 기록" />
+<meta property="og:title" content="블로그 첫 번째 글 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/first-post/" />
+<meta property="og:site_name" content="블로그 첫 번째 글" />
+
+<meta property="article:published_time" content="2021-03-29 10:32:03 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>블로그 첫 번째 글 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">블로그 첫 번째 글</h1>
+        <time datetime="2021-03-29T10:32:03&#43;0900">2021년 3월 29일 월요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/hugo">hugo</a></li>
+        
+        <li><a href="https://nasoru.com/tags/blog">blog</a></li>
+        
+        </ul>
+        
+        <p>네이버 블로그 html/css 수정안됨.<br>
+티스토리 블로그 자유로운 html/css 수정. 제거 불가능한 잡다한 스크립트.<br>
+워드프레스 대부분 자유롭게 커스터마이징 가능하지만 복잡한 이유로<br>
+<a class="link" href="https://gohugo.io/" target="_blank" rel="noopener">hugo</a> 정적사이트생성기 내가 필요한 기능만 깔끔하게 사용. + 가장 빠른 빌드 속도.</p>
+<ul>
+<li>마크다운 글쓰기</li>
+<li>간단한 구조</li>
+<li>필요한 기능만 사용가능</li>
+</ul>
+
+<h2 id="블로그-테마-만들기" class="title">
+    <a href="#%eb%b8%94%eb%a1%9c%ea%b7%b8-%ed%85%8c%eb%a7%88-%eb%a7%8c%eb%93%a4%ea%b8%b0">블로그 테마 만들기</a>
+</h2>
+
+<blockquote>
+<p>간단한 1단 반응형.</p>
+</blockquote>
+<ul>
+<li>hugo 이미지 리사이즈, 변환 위해서 content 폴더 구조 변경</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">content\posts
+</span></span><span class="line"><span class="cl">├─ post1
+</span></span><span class="line"><span class="cl">│   └─ index.md
+</span></span><span class="line"><span class="cl">├─ post2
+</span></span><span class="line"><span class="cl">│   ├─ image1.png
+</span></span><span class="line"><span class="cl">│   ├─ image2.png
+</span></span><span class="line"><span class="cl">│   ├─ image3.png
+</span></span><span class="line"><span class="cl">│   └─ index.md
+</span></span><span class="line"><span class="cl">├─ post3
+</span></span><span class="line"><span class="cl">│   ├─ image1.png
+</span></span><span class="line"><span class="cl">│   ├─ image2.png
+</span></span><span class="line"><span class="cl">│   ├─ image3.png
+</span></span><span class="line"><span class="cl">│   └─ index.md
+</span></span></code></pre></div><ul>
+<li>태그, 아카이브, 검색 페이지 추가.</li>
+<li>검색 기능을 추가했다. 제목, 태그, 요약에서 텍스트를 검색할 수 있다. 글 내용 전체를 검색할 수 있는 것은 아니다.</li>
+<li>모든 이미지 본문크기로 리사이즈, webp 로 변환. 이미지 클릭시 원본이미지 표시. <del>스크롤중에 새로고침시 이미지가 뜨지 않는 오류가 있다.</del></li>
+<li>목록 <code>pagination</code> 제거하고 더보기 버튼으로 변경.</li>
+</ul>
+
+<h2 id="댓글-시스템" class="title">
+    <a href="#%eb%8c%93%ea%b8%80-%ec%8b%9c%ec%8a%a4%ed%85%9c">댓글 시스템</a>
+</h2>
+
+<p>disqus에서 딸려오는 스크립트가 너무 많고 로딩도 느리다. 그래서 다른 댓글 시스템을 찾다가 <a class="link" href="https://cusdis.com/doc#" target="_blank" rel="noopener">cusdis</a>를 설치하게 되었다. 단점은 익명 댓글만 가능하고 댓글을 하나하나 승인해야한다. 장점으로는 댓글을 관리할 수 있는 대시보드 지원&hellip;? 가끔 관리자 댓글이 없는 댓글 시스템이 있다 ex) <a class="link" href="https://github.com/posativ/isso" target="_blank" rel="noopener">isso</a></p>
+<ul>
+<li>댓글 디스코드 웹훅, 이메일 알림 추가.</li>
+</ul>
+
+<h2 id="참고-페이지" class="title">
+    <a href="#%ec%b0%b8%ea%b3%a0-%ed%8e%98%ec%9d%b4%ec%a7%80">참고 페이지</a>
+</h2>
+
+<ul>
+<li><a class="link" href="https://github.com/spech66/hugo-best-practices" target="_blank" rel="noopener">hugo 모범사례</a></li>
+<li><a class="link" href="https://github.com/kaushalmodi/hugo-search-fuse-js" target="_blank" rel="noopener">kaushalmodi fuse search</a></li>
+<li><a class="link" href="https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates" target="_blank" rel="noopener">hugo 내부 템플릿 소스</a></li>
+</ul>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="7999d4bad071150d47c66e5c8fc857e7">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="7999d4bad071150d47c66e5c8fc857e7" 
+        data-page-url="https://nasoru.com/posts/first-post/"
+        data-page-title="블로그 첫 번째 글"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/hugo-custom-shortcodes/">Hugo 사용자 정의 단축코드 Shortcode 만들기</a></li>
+        
+        <li><a href="/posts/hugo-page-variables/">Hugo 페이지 변수 정리</a></li>
+        
+        <li><a href="/posts/hugo-image-webp/">블로그 WebP 이미지 포맷 사용하기</a></li>
+        
+        <li><a href="/posts/hugo-windows/">윈도우10 hugo 블로그 만들기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

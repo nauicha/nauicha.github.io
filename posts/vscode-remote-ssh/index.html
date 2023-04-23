@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="비주얼스튜디오코드에서 SSH 원격 접속 방법.">
+<meta property="og:description"  content="비주얼스튜디오코드에서 SSH 원격 접속 방법." />
+<meta property="og:title" content="VSCode Remote SSH 원격서버 연결하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/vscode-remote-ssh/" />
+<meta property="og:site_name" content="VSCode Remote SSH 원격서버 연결하기" />
+
+<meta property="article:published_time" content="2022-01-15 01:40:53 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>VSCode Remote SSH 원격서버 연결하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">VSCode Remote SSH 원격서버 연결하기</h1>
+        <time datetime="2022-01-15T01:40:53&#43;0900">2022년 1월 15일 토요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/vscode">vscode</a></li>
+        
+        <li><a href="https://nasoru.com/tags/ssh">ssh</a></li>
+        
+        </ul>
+        
+        
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-remote-ssh/remotessh.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-remote-ssh/remotessh_huf7c3095349872479c331c0167ea516ac_76820_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="155"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>Remote SSH</figcaption>
+</figure>
+
+<p>비주얼스튜디오코드 VSCode에서 SSH 원격 접속 방법.
+탐색기 + 에디터 + 터미널 사용가능.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-remote-ssh/ctrlshiftp.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-remote-ssh/ctrlshiftp_hua2a84e4425079a9729f12757909faa39_79476_602x0_resize_q100_h2_box_3.webp"
+    width="602" height="304"
+    
+    alt="ctrlshiftp.png"
+    >
+  </a>
+  
+</figure>
+
+<p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> 로 ssh 검색 또는 창 왼쪽 아래 초록색 <code>&gt;&lt;</code> 아이콘 사용.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-remote-ssh/config.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-remote-ssh/config_hu7ac1ba391a11c97ea73fbd29d110a3cd_12706_602x0_resize_q100_h2_box_3.webp"
+    width="602" height="105"
+    
+    alt="config.png"
+    >
+  </a>
+  
+</figure>
+
+<p>Remote-SSH:Connect to Host&hellip; &gt; Configure SSH Hosts&hellip;<br>
+nasoru는 미리 만들어둔 세션.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/vscode-remote-ssh/selectcfg.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/vscode-remote-ssh/selectcfg_hu7d0ffd776a1e7d8bc4ca78a5be88083f_29616_601x0_resize_q100_h2_box_3.webp"
+    width="601" height="152"
+    
+    alt="selectcfg.png"
+    >
+  </a>
+  
+</figure>
+
+<p>기본으로 선택할 수 있는 config 경로는 <code>C:\Users\사용자이름\.ssh\config</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="c1"># Read more about SSH config files: https://linux.die.net/man/5/ssh_config</span>
+</span></span><span class="line"><span class="cl"><span class="na">Host 호스트 세션 별칭</span>
+</span></span><span class="line"><span class="cl">    <span class="na">HostName 호스트 이름 (IP주소)</span>
+</span></span><span class="line"><span class="cl">    <span class="na">User 사용자 이름</span>
+</span></span><span class="line"><span class="cl">    <span class="na">Port 포트 지정 (기본 22)</span>
+</span></span><span class="line"><span class="cl">    <span class="na">IdentityFile 개인키 저장 파일 위치</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="na">Host node-vm</span>
+</span></span><span class="line"><span class="cl">    <span class="na">HostName &lt;vm address&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">User sana</span>
+</span></span><span class="line"><span class="cl">    <span class="na">Port 5522</span>
+</span></span><span class="line"><span class="cl">    <span class="na">IdentityFile ~/.ssh/id_node_vm</span>
+</span></span></code></pre></div><p>세션 여러개는 똑같이 추가.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="347bec796ef42e2abeab252fcf9504c4">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="347bec796ef42e2abeab252fcf9504c4" 
+        data-page-url="https://nasoru.com/posts/vscode-remote-ssh/"
+        data-page-title="VSCode Remote SSH 원격서버 연결하기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/vscode-start-page/">VSCode 이전 작업폴더 기억하지 않고 기본 시작화면 사용하기</a></li>
+        
+        <li><a href="/posts/vscode-startup-task/">VSCode 작업폴더 시작시 명령 실행하기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

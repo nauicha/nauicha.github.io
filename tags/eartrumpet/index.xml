@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eartrumpet on nasoru</title>
+    <link>https://nasoru.com/tags/eartrumpet/</link>
+    <description>Recent content in eartrumpet on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Thu, 03 Mar 2022 15:52:10 +0000</lastBuildDate><atom:link href="https://nasoru.com/tags/eartrumpet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>윈도우10 간단하게 볼륨믹서 기능 사용하기 EarTrumpet</title>
+      <link>https://nasoru.com/posts/ear-trumpet/</link>
+      <pubDate>Thu, 03 Mar 2022 15:52:10 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/ear-trumpet/</guid>
+      <description>윈도우10에서 프로그램 별로 볼륨을 조절할 수 있는 볼륨 믹서를 열려면 트레이아이콘 우클릭을하고 볼륨 믹서를 선택해야 조절할 수 있는 창이 표시된다. 윈도우 10 기본 EarTrumpet EarTrumpet 은 위와 같은 과정을 생략하고 트레이 아이콘 클릭 한번으로 볼륨믹서까지 포함된 창을 보여준다. 추가 기능으로는 단축키로도 표시할 수 있다. EarTrumpet 마이크로소프트 스토어에서 다운로드. https://www.microsoft.com/store/productId/9NBLGGH516XP 작업 표시줄 우클릭 &amp;gt; 작업 표시줄 설정 작업 표시줄에 표시할 아이콘 선택으로 기존 윈도우10 볼륨아이콘을 숨기고 EarTrumpet 볼</description>
+    </item>
+    
+  </channel>
+</rss>

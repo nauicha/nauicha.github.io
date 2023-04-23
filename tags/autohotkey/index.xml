@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>autohotkey on nasoru</title>
+    <link>https://nasoru.com/tags/autohotkey/</link>
+    <description>Recent content in autohotkey on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Thu, 10 Feb 2022 06:52:36 +0000</lastBuildDate><atom:link href="https://nasoru.com/tags/autohotkey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>단축키(핫키)로 기본 재생장치 변경 스크립트 AHK</title>
+      <link>https://nasoru.com/posts/ahk-sound-switch/</link>
+      <pubDate>Thu, 10 Feb 2022 06:52:36 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/ahk-sound-switch/</guid>
+      <description>장치 변경 알림 이전 글 - SoundSwitch 에서는 장치 변경알림 배너나 윈도우토스트알림이 전체화면에서 보이지 않는다. 오토핫키 스크립트 +F10 은 Shift + F10 을 단축키로 설정. 다른 단축키로 설정하기 위한 관련 문서 nircmd 가 필요하다. 같은폴더에 저장. ;#NoTrayIcon #Persistent #SingleInstance ^!BACKSPACE:: toggle:=!toggle if toggle { Run nircmdc setdefaultsounddevice &amp;#34;스피커&amp;#34; soundToggleBox(&amp;#34;스피커&amp;#34;) } else { Run nircmdc setdefaultsounddevice &amp;#34;Headset Earphone&amp;#34; soundToggleBox(&amp;#34;Headset Earphone&amp;#34;) } Return soundToggleBox(Device){ IfWinExist, soundToggleWin { Gui, destroy } Gui, +ToolWindow -Caption +0x20000 +alwaysontop Gui, Margin, 0, -8 Gui, color, C242424 Gui, Font, S11 CFFFFFF, 맑은 고딕 Gui Add, Text, x+m w300 h70 +0x201, 기본 장치</description>
+    </item>
+    
+  </channel>
+</rss>

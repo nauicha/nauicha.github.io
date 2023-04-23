@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wordpress on nasoru</title>
+    <link>https://nasoru.com/tags/wordpress/</link>
+    <description>Recent content in wordpress on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Tue, 16 Nov 2021 23:27:38 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>워드프레스 구텐베르크 편집기 가로폭 제한하기</title>
+      <link>https://nasoru.com/posts/gutenberg-width/</link>
+      <pubDate>Tue, 16 Nov 2021 23:27:38 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/gutenberg-width/</guid>
+      <description>워드프레스 설치하고 테마 바꾸고 글을 쓰려는데 에디터 본문 폭이 실제 본문 폭이랑 다른 것이 신경 쓰여서 찾아봤습니다. 구 버전 에디터 말고 구텐베르크 에디터입니다. 위 이미지는 이미 가로 폭이 수정된 상태 입니다. 제 본문 사이즈인 720px /* editor width */ function gutenberg_admin_styles() { echo &amp;#39; &amp;lt;style&amp;gt; /* Main column width */ .wp-block { max-width: 720px !important; } &amp;lt;/style&amp;gt; &amp;#39;; } add_action(&amp;#39;admin_head&amp;#39;, &amp;#39;gutenberg_admin_styles&amp;#39;); max-width 를 가로폭만큼 바꾸고 function.php 파일에 추가해주세요. 이렇게 해도 편집상태에서 몇몇 블록은 제대로 표시되지 않음. 현재는 워드프레스를 사용하고 있지 않습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="xxx">
+<meta property="og:description"  content="xxx" />
+<meta property="og:title" content="블로그 WebP 이미지 포맷 사용하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/hugo-image-webp/" />
+<meta property="og:site_name" content="블로그 WebP 이미지 포맷 사용하기" />
+
+<meta property="article:published_time" content="2022-01-23 12:51:41 &#43;0000 UTC" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>블로그 WebP 이미지 포맷 사용하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">블로그 WebP 이미지 포맷 사용하기</h1>
+        <time datetime="2022-01-23T12:51:41Z">2022년 1월 23일 일요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/hugo">hugo</a></li>
+        
+        <li><a href="https://nasoru.com/tags/blog">blog</a></li>
+        
+        <li><a href="https://nasoru.com/tags/webp">webp</a></li>
+        
+        </ul>
+        
+        
+<h2 id="차세대-이미지-형식" class="title">
+    <a href="#%ec%b0%a8%ec%84%b8%eb%8c%80-%ec%9d%b4%eb%af%b8%ec%a7%80-%ed%98%95%ec%8b%9d">차세대 이미지 형식</a>
+</h2>
+
+<p>차세대 이미지 형식 AVIF , WebP. AVIF은 아직 지원하지 않는 브라우저가 많으므로 패스. IE11에서 지원하지 않는 WebP. 하지만 IE11 2022년 6월 15일 지원종료, 점유율도 1% 미만으로 떨어졌기 때문에 예전에 미뤄뒀던 WebP 이미지로 교체.</p>
+<ul>
+<li>WEBP 현재 브라우저 지원, <a class="link" href="https://caniuse.com/webp" target="_blank" rel="noopener">https://caniuse.com/webp</a></li>
+<li>AVIF 현재 브라우저 지원, <a class="link" href="https://caniuse.com/avif" target="_blank" rel="noopener">https://caniuse.com/avif</a></li>
+</ul>
+
+<h2 id="hugo-블로그에서-webp-변환" class="title">
+    <a href="#hugo-%eb%b8%94%eb%a1%9c%ea%b7%b8%ec%97%90%ec%84%9c-webp-%eb%b3%80%ed%99%98">hugo 블로그에서 Webp 변환</a>
+</h2>
+
+<p><a class="link" href="https://gohugo.io/news/0.83.0-relnotes/" target="_blank" rel="noopener">hugo extended 0.83.0</a> 부터 Webp 를 지원. 변환도 가능하기때문에 사용. 처음에는 이미지 323개를 한꺼번에 변환하면서 22578ms 로 빌드시간이 길다. 하지만 변환된 이미지 파일을 <code>resources\_gen\images</code> 폴더에 저장해서 다음 빌드 때는 변환되지 않은 이미지만 변환해서 빌드 시간을 줄여준다.</p>
+<p>/layouts/shortcodes/figure.html</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$origin</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="na">.Page.Resources.GetMatch</span><span class="w"> </span><span class="o">(</span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;*%s*&#34;</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;src&#34;</span><span class="o">))</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$resizeOptions</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;%dx q100 webp&#34;</span><span class="w"> </span><span class="nx">$origin</span><span class="na">.Width</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$img</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$origin</span><span class="na">.Resize</span><span class="w"> </span><span class="nx">$resizeOptions</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="nx">$img680</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">$origin</span><span class="na">.Resize</span><span class="w"> </span><span class="s">&#34;680x q100 webp&#34;</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$origin</span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#39;_blank&#39;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">gt</span><span class="w"> </span><span class="nx">$origin</span><span class="na">.Width</span><span class="w"> </span><span class="nx">680</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$img680</span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">width</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$img680</span><span class="na">.Width</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$img680</span><span class="na">.Height</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="na">src</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$img</span><span class="na">.RelPermalink</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="na">width</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$img</span><span class="na">.Width</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="nx">$img</span><span class="na">.Height</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">    <span class="na">alt</span><span class="o">=</span><span class="s">&#34;</span><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">markdownify</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">plainify</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;src&#34;</span><span class="w"> </span><span class="cp">}}{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{-</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">-}}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">(</span><span class="na">.Get</span><span class="w"> </span><span class="s">&#34;title&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">-}}{{</span><span class="w"> </span><span class="na">.</span><span class="w"> </span><span class="cp">}}{{-</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{-</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span></code></pre></div><ol>
+<li>webp 화질 100%로 변환.</li>
+<li>내 본문 가로사이즈가 680px 이기 때문에 680px 보다 큰 이미지들을 680px로 리사이즈</li>
+<li>이미지 클릭시 원본 업로드 이미지를 새창으로 표시한다.</li>
+</ol>
+<p>사용 방법은 <code>&lt;figure src=&quot;image.png&quot; title=&quot;caption&quot;&gt;</code> 를 <code>{{여기}}</code> 에 넣어서 사용. 기본 이미지 렌더링에서 figure 태그를 추가했는데 버그인지 위 아래로 빈 p 태그가 생겨서 포기.
+webp 파일을 또 변환하면 화질저하가 일어나서 예외 처리 또는 webp 업로드X</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="6fdd5c2462922a3b4370490548941f26">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="6fdd5c2462922a3b4370490548941f26" 
+        data-page-url="https://nasoru.com/posts/hugo-image-webp/"
+        data-page-title="블로그 WebP 이미지 포맷 사용하기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/hugo-custom-shortcodes/">Hugo 사용자 정의 단축코드 Shortcode 만들기</a></li>
+        
+        <li><a href="/posts/hugo-page-variables/">Hugo 페이지 변수 정리</a></li>
+        
+        <li><a href="/posts/first-post/">블로그 첫 번째 글</a></li>
+        
+        <li><a href="/posts/hugo-windows/">윈도우10 hugo 블로그 만들기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

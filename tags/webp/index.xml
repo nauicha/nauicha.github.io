@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webp on nasoru</title>
+    <link>https://nasoru.com/tags/webp/</link>
+    <description>Recent content in webp on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 23 Jan 2022 12:51:41 +0000</lastBuildDate><atom:link href="https://nasoru.com/tags/webp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>블로그 WebP 이미지 포맷 사용하기</title>
+      <link>https://nasoru.com/posts/hugo-image-webp/</link>
+      <pubDate>Sun, 23 Jan 2022 12:51:41 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/hugo-image-webp/</guid>
+      <description>차세대 이미지 형식 차세대 이미지 형식 AVIF , WebP. AVIF은 아직 지원하지 않는 브라우저가 많으므로 패스. IE11에서 지원하지 않는 WebP. 하지만 IE11 2022년 6월 15일 지원종료, 점유율도 1% 미만으로 떨어졌기 때문에 예전에 미뤄뒀던 WebP 이미지로 교체. WEBP 현재 브라우저 지원, https://caniuse.com/webp AVIF 현재 브라우저 지원, https://caniuse.com/avif hugo 블로그에서 Webp 변환 hugo extended 0.83.0 부터 Webp 를 지원. 변환도 가능하기때문에 사용. 처음에는 이미지 323개를 한꺼번에 변환하면서 22578ms 로 빌드시간이 길다. 하지만 변환된 이미</description>
+    </item>
+    
+  </channel>
+</rss>

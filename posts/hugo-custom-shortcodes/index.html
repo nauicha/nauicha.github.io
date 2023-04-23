@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="hugo 사용자 정의 단축코드 만들기">
+<meta property="og:description"  content="hugo 사용자 정의 단축코드 만들기" />
+<meta property="og:title" content="Hugo 사용자 정의 단축코드 Shortcode 만들기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/hugo-custom-shortcodes/" />
+<meta property="og:site_name" content="Hugo 사용자 정의 단축코드 Shortcode 만들기" />
+
+<meta property="article:published_time" content="2022-08-30 20:40:03 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>Hugo 사용자 정의 단축코드 Shortcode 만들기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">Hugo 사용자 정의 단축코드 Shortcode 만들기</h1>
+        <time datetime="2022-08-30T20:40:03&#43;0900">2022년 8월 30일 화요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/hugo">hugo</a></li>
+        
+        <li><a href="https://nasoru.com/tags/blog">blog</a></li>
+        
+        </ul>
+        
+        <p>Shortcode 는 Markdown 파일에서 사용할수 있는 단축코드로 긴 코드를 짧게 형식화해서 사용하거나 html 그대로 Markdown 으로 써진 글 안에 삽입할 수 있다.</p>
+<p><a class="link" href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes" target="_blank" rel="noopener">Hugo 내장 단축코드 공식문서</a> 기본으로 내장된 단축코드도 있다.</p>
+
+<h2 id="나만의-단축코드-shortcode-만들기" class="title">
+    <a href="#%eb%82%98%eb%a7%8c%ec%9d%98-%eb%8b%a8%ec%b6%95%ec%bd%94%eb%93%9c-shortcode-%eb%a7%8c%eb%93%a4%ea%b8%b0">나만의 단축코드 Shortcode 만들기</a>
+</h2>
+
+<p>최근에 자주 사용하고 있는 details 더보기를 단축코드로 만들어 보았다.</p>
+
+<h3 id="detailshtml" class="title">
+    <a href="#detailshtml">details.html</a>
+</h3>
+
+<p><code>/layouts/shortcodes/</code> 경로에 <code>details.html</code> 이름으로 저장해야한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">details</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">summary</span><span class="p">&gt;</span><span class="cp">{{</span><span class="w"> </span><span class="na">.Get</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="cp">}}</span><span class="p">&lt;/</span><span class="nt">summary</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="cp">{{</span><span class="w"> </span><span class="na">.Inner</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><code>.Get 0</code> 은 첫번째 인자를 가져옴. <code>.Get 1</code> <code>.Get 2</code> &hellip;</p>
+<p><code>.Get &quot;class&quot;</code> class 값을 가져옴.</p>
+<p><code>.Inner</code>  내용을 가져온다</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl">[[<span class="p">&lt;</span><span class="nt">details</span> <span class="na">더보기이름</span><span class="p">&gt;</span>]]
+</span></span><span class="line"><span class="cl">내용
+</span></span><span class="line"><span class="cl">[[<span class="p">&lt;/</span><span class="nt">details</span><span class="p">&gt;</span>]]
+</span></span></code></pre></div><p><strong>중괄호를 대괄호로 바꾸어야 한다.</strong> <code>{{</code> <code>&lt;단축코드&gt;</code> <code>}}</code></p>
+
+<h3 id="결과" class="title">
+    <a href="#%ea%b2%b0%ea%b3%bc">결과</a>
+</h3>
+
+<details>
+  <summary>더보기이름</summary>
+  
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+내용내용내용내용내용 </br>
+
+</details>
+
+<h2 id="단축코드로-markdown-파일에-html-삽입하기" class="title">
+    <a href="#%eb%8b%a8%ec%b6%95%ec%bd%94%eb%93%9c%eb%a1%9c-markdown-%ed%8c%8c%ec%9d%bc%ec%97%90-html-%ec%82%bd%ec%9e%85%ed%95%98%ea%b8%b0">단축코드로 markdown 파일에 html 삽입하기</a>
+</h2>
+
+
+<h3 id="htmlhtml" class="title">
+    <a href="#htmlhtml">html.html</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="na">.Inner</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>html을 마크다운 파일에 삽입할 때 단축코드를 이용해 삽입한다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl">[[<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>]]
+</span></span><span class="line"><span class="cl">내용
+</span></span><span class="line"><span class="cl">[[<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>]]
+</span></span></code></pre></div><p><strong>중괄호를 대괄호로 바꾸어야 한다.</strong> <code>{{</code> <code>&lt;단축코드&gt;</code> <code>}}</code></p>
+
+<h2 id="추가-정보" class="title">
+    <a href="#%ec%b6%94%ea%b0%80-%ec%a0%95%eb%b3%b4">추가 정보</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl">[[<span class="p">&lt;</span> <span class="nt">details</span> <span class="na">국경지대</span><span class="p">&gt;</span>]]
+</span></span><span class="line"><span class="cl">[[<span class="p">&lt;</span> <span class="nt">figure</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;a3.png&#34;</span><span class="p">&gt;</span>]]
+</span></span><span class="line"><span class="cl">[[<span class="p">&lt;/</span> <span class="nt">details</span> <span class="p">&gt;</span>]]
+</span></span></code></pre></div><p>단축코드안에 단축코드도 작동한다.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="e36a3ef3a6cf44a75796225577c1d2a7">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="e36a3ef3a6cf44a75796225577c1d2a7" 
+        data-page-url="https://nasoru.com/posts/hugo-custom-shortcodes/"
+        data-page-title="Hugo 사용자 정의 단축코드 Shortcode 만들기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/hugo-page-variables/">Hugo 페이지 변수 정리</a></li>
+        
+        <li><a href="/posts/hugo-image-webp/">블로그 WebP 이미지 포맷 사용하기</a></li>
+        
+        <li><a href="/posts/first-post/">블로그 첫 번째 글</a></li>
+        
+        <li><a href="/posts/hugo-windows/">윈도우10 hugo 블로그 만들기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

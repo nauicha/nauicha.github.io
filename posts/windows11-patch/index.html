@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="윈도우11 에서 불편했던 부분들 설정하기">
+<meta property="og:description"  content="윈도우11 에서 불편했던 부분들 설정하기" />
+<meta property="og:title" content="윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/windows11-patch/" />
+<meta property="og:site_name" content="윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음" />
+
+<meta property="article:published_time" content="2022-07-09 17:57:36 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음</h1>
+        <time datetime="2022-07-09T17:57:36&#43;0900">2022년 7월 9일 토요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/windows">windows</a></li>
+        
+        </ul>
+        
+        <p>현재 설치된 버전 <strong>윈도우11 22000.778</strong> 아래 모든 설정은 개인적으로 생각했을 때 불편했던 부분들을 개선한 방법이다. 윈도우10을 포기하지 못한 것인지도 모른다. 파일 탐색기 탭 기능 기다리는중.</p>
+
+<h2 id="explorerpatcher" class="title">
+    <a href="#explorerpatcher">ExplorerPatcher</a>
+</h2>
+
+<p><a class="link" href="https://github.com/valinet/ExplorerPatcher" target="_blank" rel="noopener">ExplorerPatcher 프로젝트 페이지</a>. 작업 표시줄, 시스템 트레이, 파일 탐색기, 시작 메뉴등 윈도우 작업환경 개선을 목표로 하는 프로젝트. 내가 원하던 기능이 모여있다.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows11-patch/explorer.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows11-patch/explorer_hu1d84b7f1cd9681bd95f3130e6580e224_44784_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="388"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>파일 탐색기</figcaption>
+</figure>
+
+<ul>
+<li><strong>둥근모서리를 각진모서리로 변경</strong>(창테두리만 적용). 개인적으로 둥근 모서리의 여백이 마음에 들지 않아 변경.</li>
+<li><strong>시작 메뉴 맞춤 항목 제거</strong>. 공간 사용 가능. 맞춤항목을 숨기더라도 기본 윈도우11에서는 그 공간을 사용할 수 없고 3줄만 사용 가능하다.</li>
+<li><strong>파일 탐색기 검색창 삭제</strong>. Everything 으로 대체. 사용하지 않던 검색창 삭제</li>
+<li><strong>작업 표시줄 우클릭 메뉴 윈도우10 스타일로 복원</strong>. 작업표시줄 우클릭으로 작업관리자를 자주 사용했다.</li>
+<li><strong>우클릭 메뉴 윈도우10 스타일 사용</strong>. 익숙하지 않다.</li>
+<li><strong><del>초시계 표시</del></strong> 윈도우11에서 초시계 완전 제거됨.</li>
+</ul>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows11-patch/contextmenu.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows11-patch/contextmenu_hu07e263507ebfbceb5f6bb761e805368b_6589_218x0_resize_q100_h2_box_3.webp"
+    width="218" height="258"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>우클릭 메뉴</figcaption>
+</figure>
+
+
+<h2 id="윈도우11-애니메이션시각효과-제거" class="title">
+    <a href="#%ec%9c%88%eb%8f%84%ec%9a%b011-%ec%95%a0%eb%8b%88%eb%a9%94%ec%9d%b4%ec%85%98%ec%8b%9c%ea%b0%81%ed%9a%a8%ea%b3%bc-%ec%a0%9c%ea%b1%b0">윈도우11 애니메이션/시각효과 제거</a>
+</h2>
+
+<ol>
+<li>
+<p>설정 &gt; 접근성 &gt; 시각효과 &gt; 애니메이션 효과 끄기.</p>
+</li>
+<li>
+<p><kbd>Win</kbd>+<kbd>R</kbd> <code>SystemPropertiesPerformance</code> 실행.</p>
+</li>
+</ol>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows11-patch/effect.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows11-patch/effect_huc4ba51245203ae709fd3bcba2cc5a94f_19192_419x0_resize_q100_h2_box_3.webp"
+    width="419" height="608"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>시각 효과</figcaption>
+</figure>
+
+<p>내가 적용한 효과들. 체크된 항목은 끄면 많이 어색하다.</p>
+<p><strong>창의 제어 및 요소에 애니메이션 효과 주기</strong> : 크롬 애니메이션 효과도 꺼버린다. <code>scroll-behavior: smooth;</code></p>
+
+<h2 id="그-외-설정" class="title">
+    <a href="#%ea%b7%b8-%ec%99%b8-%ec%84%a4%ec%a0%95">그 외 설정</a>
+</h2>
+
+<ul>
+<li>파일탐색기 설정 &gt; 일반 &gt; 내 PC 즐겨찾기 2항목 체크 해제.</li>
+<li>개인설정 &gt; 시작 &gt; 최근 항목 표시 해제. 시작메뉴 맞춤(추천) 비우기.</li>
+<li><kbd>Win</kbd>+<kbd>V</kbd> 자주 사용하는 클립보드 기능. 꺼짐(기본).</li>
+<li><strong>네트워크 및 인터넷 &gt; 프록시 &gt; 자동설정검색 끄기.</strong> 인터넷정상 컴퓨터정상인데 크롬 실행(인터넷 연결)이 늦어진다면 이 기능이 켜져있다. 무조건 해제.</li>
+</ul>
+
+<h2 id="sysmain-windows-search-서비스-끄기" class="title">
+    <a href="#sysmain-windows-search-%ec%84%9c%eb%b9%84%ec%8a%a4-%eb%81%84%ea%b8%b0">SysMain, Windows Search 서비스 끄기</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">net</span> <span class="n">stop</span> <span class="n">SysMain</span>
+</span></span><span class="line"><span class="cl"><span class="nb">sc </span><span class="n">config</span> <span class="n">SysMain</span> <span class="n">start</span><span class="p">=</span><span class="n">disabled</span>
+</span></span><span class="line"><span class="cl"><span class="n">net</span> <span class="n">stop</span> <span class="n">WSearch</span>
+</span></span><span class="line"><span class="cl"><span class="nb">sc </span><span class="n">config</span> <span class="n">WSearch</span> <span class="n">start</span><span class="p">=</span><span class="n">disabled</span>
+</span></span></code></pre></div><p>SSD를 사용한다면 효과가 없는 서비스.
+백그라운드에서 CPU를 항상 사용.</p>
+
+<h2 id="개인정보데이터수집-차단" class="title">
+    <a href="#%ea%b0%9c%ec%9d%b8%ec%a0%95%eb%b3%b4%eb%8d%b0%ec%9d%b4%ed%84%b0%ec%88%98%ec%a7%91-%ec%b0%a8%eb%8b%a8">개인정보데이터수집 차단</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">reg</span> <span class="n">add</span> <span class="s2">&#34;HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection&#34;</span> <span class="p">/</span><span class="n">v</span> <span class="s2">&#34;AllowTelemetry&#34;</span> <span class="p">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="p">/</span><span class="n">d</span> <span class="s2">&#34;0&#34;</span> <span class="p">/</span><span class="n">f</span>
+</span></span></code></pre></div>
+<h2 id="전원옵션-고성능" class="title">
+    <a href="#%ec%a0%84%ec%9b%90%ec%98%b5%ec%85%98-%ea%b3%a0%ec%84%b1%eb%8a%a5">전원옵션 고성능</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">POWERCFG</span> <span class="n">-SETACTIVE</span> <span class="n">8c5e7fda-e8bf</span><span class="p">-</span><span class="n">4a96</span><span class="p">-</span><span class="n">9a85-a6e23a8c635c</span>
+</span></span><span class="line"><span class="cl"><span class="n">POWERCFG</span> <span class="p">/</span><span class="n">Change</span> <span class="p">/</span><span class="nb">standby-timeout</span><span class="n">-ac</span> <span class="n">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">POWERCFG</span> <span class="p">/</span><span class="n">Change</span> <span class="p">/</span><span class="nb">disk-timeout</span><span class="n">-ac</span> <span class="n">0</span>
+</span></span></code></pre></div><p>노트북 사용X</p>
+
+<h2 id="최대-절전모드-끄기" class="title">
+    <a href="#%ec%b5%9c%eb%8c%80-%ec%a0%88%ec%a0%84%eb%aa%a8%eb%93%9c-%eb%81%84%ea%b8%b0">최대 절전모드 끄기</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">powercfg</span> <span class="n">-h</span> <span class="n">off</span>
+</span></span></code></pre></div><p>노트북 사용X</p>
+
+<h2 id="caps-lock-비활성화" class="title">
+    <a href="#caps-lock-%eb%b9%84%ed%99%9c%ec%84%b1%ed%99%94">Caps lock 비활성화</a>
+</h2>
+
+<ul>
+<li>활성화 <a class="link" href="https://nasoru.com/posts/windows11-patch/enable_capslock.reg" target="_blank" rel="noopener">https://nasoru.com/posts/windows11-patch/enable_capslock.reg</a></li>
+<li>비활성화 <a class="link" href="https://nasoru.com/posts/windows11-patch/disable_capslock.reg" target="_blank" rel="noopener">https://nasoru.com/posts/windows11-patch/disable_capslock.reg</a></li>
+</ul>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="97ec13d14f0cd6500763a6e07147930a">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="97ec13d14f0cd6500763a6e07147930a" 
+        data-page-url="https://nasoru.com/posts/windows11-patch/"
+        data-page-title="윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/windows11-night-mode-error/">윈도우 야간모드 관련 오류 해결방법</a></li>
+        
+        <li><a href="/posts/taskbar-corner-overflow/">윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기</a></li>
+        
+        <li><a href="/posts/rmstart/">윈도우 작업 관리자에서 시작프로그램 완전히 제거하기</a></li>
+        
+        <li><a href="/posts/ear-trumpet/">윈도우10 간단하게 볼륨믹서 기능 사용하기 EarTrumpet</a></li>
+        
+        <li><a href="/posts/windows10-sftp-drive/">윈도우10 SFTP 네트워크 드라이브에 연결하기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

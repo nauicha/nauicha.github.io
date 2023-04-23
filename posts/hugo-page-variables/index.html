@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="hugo 변수 기록">
+<meta property="og:description"  content="hugo 변수 기록" />
+<meta property="og:title" content="Hugo 페이지 변수 정리 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/hugo-page-variables/" />
+<meta property="og:site_name" content="Hugo 페이지 변수 정리" />
+
+<meta property="article:published_time" content="2022-08-22 02:09:57 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>Hugo 페이지 변수 정리 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">Hugo 페이지 변수 정리</h1>
+        <time datetime="2022-08-22T02:09:57&#43;0900">2022년 8월 22일 월요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/hugo">hugo</a></li>
+        
+        <li><a href="https://nasoru.com/tags/blog">blog</a></li>
+        
+        </ul>
+        
+        <p>헷갈렸던 부분들만 정리했다.</p>
+
+<h2 id="페이지-종류-kind" class="title">
+    <a href="#%ed%8e%98%ec%9d%b4%ec%a7%80-%ec%a2%85%eb%a5%98-kind">페이지 종류 Kind</a>
+</h2>
+
+
+<h3 id="kind" class="title">
+    <a href="#kind">.Kind</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="na">.Kind</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>페이지의 종류를 출력 <code>home</code>, <code>page</code>, <code>section</code>, <code>taxanomy</code> 등..</p>
+
+<h3 id="ishome" class="title">
+    <a href="#ishome">.IsHome</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsHome</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">home
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p>사이트 루트 경로에서 <code>True</code></p>
+
+<h3 id="isnode" class="title">
+    <a href="#isnode">.IsNode</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsNode</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">node
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><ul>
+<li>일반 콘텐츠 페이지에서 <code>false</code>.</li>
+<li><code>index.md</code> 로 된 페이지를 제외한 모든 페이지를 <code>false</code></li>
+<li><code>index.md</code> 가 중첩되면 최하위 페이지를 <code>True</code></li>
+</ul>
+
+<h3 id="ispage" class="title">
+    <a href="#ispage">.IsPage</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsPage</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">page
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><ul>
+<li>일반 콘텐츠 페이지에서 <code>true</code></li>
+</ul>
+
+<h3 id="issection" class="title">
+    <a href="#issection">.IsSection</a>
+</h3>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="na">.IsSection</span><span class="w"> </span><span class="cp">}}</span>
+</span></span><span class="line"><span class="cl">section
+</span></span><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p><code>_index.md</code> 파일로 된 페이지는 <code>section</code></p>
+
+<h2 id="indexmd-와-_indexmd-의-차이" class="title">
+    <a href="#indexmd-%ec%99%80-_indexmd-%ec%9d%98-%ec%b0%a8%ec%9d%b4">index.md 와 _index.md 의 차이</a>
+</h2>
+
+<p>content 폴더에서 새로운 페이지를 생성할 때 <code>index.md</code> 와 <code>_index.md</code> 의 차이</p>
+
+<h3 id="indexmd" class="title">
+    <a href="#indexmd">index.md</a>
+</h3>
+
+<p>일반 페이지 일반적인 블로그 글에서 사용.
+<code>.IsSection</code> 에서 <code>False</code> 반환. 동일한 폴더 이하 수준의 모든 리소스 사용 가능.</p>
+
+<h3 id="_indexmd" class="title">
+    <a href="#_indexmd">_index.md</a>
+</h3>
+
+<p>트리 섹션 페이지. 페이지 중첩 가능. 하위 항목이 있는 페이지.
+<code>.IsSection</code> 에서 <code>True</code> 반환. 동일 폴더 수준내의 리소스만 사용가능.</p>
+<ul>
+<li><a class="link" href="https://gohugo.io/content-management/sections/" target="_blank" rel="noopener">sections</a></li>
+<li><a class="link" href="https://gohugo.io/content-management/organization#index-pages-_indexmd" target="_blank" rel="noopener">_index</a></li>
+</ul>
+
+<h2 id="페이지-타입-type" class="title">
+    <a href="#%ed%8e%98%ec%9d%b4%ec%a7%80-%ed%83%80%ec%9e%85-type">페이지 타입 Type</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="line"><span class="cl"><span class="cp">{{</span><span class="w"> </span><span class="na">.Type</span><span class="w"> </span><span class="cp">}}</span>
+</span></span></code></pre></div><p><a class="link" href="https://nasoru.com/posts/audio-device-switcher/" target="_blank" rel="noopener">https://nasoru.com/posts/audio-device-switcher/</a></p>
+<p>이 페이지의 <code>type</code> 은 <code>posts</code> 이다. url 에서 기본 url 바로 다음의 /posts/ 사용.</p>
+<p><a class="link" href="https://nasoru.com/test/" target="_blank" rel="noopener">https://nasoru.com/test/</a></p>
+<p>이 페이지의 <code>type</code> 은 <code>page</code> 이다. 위 페이지의 바로 상위 페이지가 홈이기 때문.
+하지만 <code>_index.md</code> 일 때는 <code>test</code> 이다.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: My First Post
+</span></span><span class="line"><span class="cl">date: 2017-02-20T15:26:23-06:00
+</span></span><span class="line"><span class="cl">type : typename
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></div><p>markdown 매개변수로 <code>type</code> 을 지정할 수 있다.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="3775796980432b7ac195d0ff84b8a8e0">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="3775796980432b7ac195d0ff84b8a8e0" 
+        data-page-url="https://nasoru.com/posts/hugo-page-variables/"
+        data-page-title="Hugo 페이지 변수 정리"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/hugo-custom-shortcodes/">Hugo 사용자 정의 단축코드 Shortcode 만들기</a></li>
+        
+        <li><a href="/posts/hugo-image-webp/">블로그 WebP 이미지 포맷 사용하기</a></li>
+        
+        <li><a href="/posts/first-post/">블로그 첫 번째 글</a></li>
+        
+        <li><a href="/posts/hugo-windows/">윈도우10 hugo 블로그 만들기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

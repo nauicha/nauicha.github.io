@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="xxx">
+<meta property="og:description"  content="xxx" />
+<meta property="og:title" content="윈도우10 SFTP 네트워크 드라이브에 연결하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/windows10-sftp-drive/" />
+<meta property="og:site_name" content="윈도우10 SFTP 네트워크 드라이브에 연결하기" />
+
+<meta property="article:published_time" content="2022-01-24 03:45:42 &#43;0000 UTC" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>윈도우10 SFTP 네트워크 드라이브에 연결하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">윈도우10 SFTP 네트워크 드라이브에 연결하기</h1>
+        <time datetime="2022-01-24T03:45:42Z">2022년 1월 24일 월요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/windows">windows</a></li>
+        
+        <li><a href="https://nasoru.com/tags/sftp">sftp</a></li>
+        
+        </ul>
+        
+        <p>원격 디렉토리를 윈도우10 탐색기에 마운트하는 방법.</p>
+<p>VSCode Remote-SSH 확장은 서버에 VS Code server (최소 1GM RAM, 2 CPU cores 필요) 를 설치하는 대신 네트워크 드라이브로 마운트하고 간단한 작업폴더로 사용하기 위해 알아보았다.</p>
+<p>터미널은 CMD OpenSSH 연결해서 사용. (윈도우10 선택적 기능에 포함된 OpenSSH 클라이언트 필요)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">ssh username@100.100.100.100 -i ~/.ssh/path
+</span></span></code></pre></div><p>ssh 키파일로 연결. <code>-i</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">ssh -L 1313:100.100.100.100:1313 username@100.100.100.100 -i ~/.ssh/path
+</span></span></code></pre></div><p>ssh 포트 1313 연결 추가. <code>-L</code></p>
+
+<h2 id="준비물" class="title">
+    <a href="#%ec%a4%80%eb%b9%84%eb%ac%bc">준비물</a>
+</h2>
+
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows10-sftp-drive/openssh.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows10-sftp-drive/openssh_hu4f9c8af24084c9b0937c2289dfdd79fa_6029_473x0_resize_q100_h2_box_3.webp"
+    width="473" height="335"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>설정 &gt; 앱 및 기능 &gt; 선택적 기능</figcaption>
+</figure>
+
+<ul>
+<li>OpenSSH 클라이언트 윈도우10 선택적 기능</li>
+<li>WinFsp, <a class="link" href="https://github.com/billziss-gh/winfsp/releases/" target="_blank" rel="noopener">https://github.com/billziss-gh/winfsp/releases/</a></li>
+<li>SSHFS-Win, <a class="link" href="https://github.com/billziss-gh/sshfs-win/releases/" target="_blank" rel="noopener">https://github.com/billziss-gh/sshfs-win/releases/</a></li>
+</ul>
+<p>WinFsp, SSHFS-Win latest 최신버전 설치.</p>
+
+<h2 id="사용방법" class="title">
+    <a href="#%ec%82%ac%ec%9a%a9%eb%b0%a9%eb%b2%95">사용방법</a>
+</h2>
+
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows10-sftp-drive/ntdrive.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows10-sftp-drive/ntdrive_hub308eb18d889496a461a4528922e4d2a_36987_461x0_resize_q100_h2_box_3.webp"
+    width="461" height="274"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>네트워크 드라이브 연결</figcaption>
+</figure>
+
+<p>네트워크 우클릭 메뉴에서 <strong>네트워크 드라이브 연결(N)&hellip;</strong></p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows10-sftp-drive/connect.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows10-sftp-drive/connect_hu1e12dd240a5afe2619ca4cd102fdc36c_77061_612x0_resize_q100_h2_box_3.webp"
+    width="612" height="452"
+    
+    alt="connect.png"
+    >
+  </a>
+  
+</figure>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">\\sshfs\username@HOST[!PORT][\PATH]
+</span></span></code></pre></div><p>PORT 기본 22, PATH 드라이브에 연결될 루트경로.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows10-sftp-drive/password.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows10-sftp-drive/password_hudd70aa446bcb9c4b55d108088795531d_56563_612x0_resize_q100_h2_box_3.webp"
+    width="612" height="452"
+    
+    alt="password.png"
+    >
+  </a>
+  
+</figure>
+
+<p>비밀번호 입력으로 연결.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">\\sshfs.k\username@HOST[!PORT][\PATH]
+</span></span></code></pre></div><p>id_rsa 키파일 경로 <code>%USERPROFILE%/.ssh/id_rsa</code> id_rsa 파일은 puttygen 에서 ppk 파일으로부터 가져오기가능.
+ppk 또는 pem 키파일은 <a class="link" href="https://github.com/evsar3/sshfs-win-manager/releases/" target="_blank" rel="noopener">https://github.com/evsar3/sshfs-win-manager/releases/</a> GUI 프로그램 필요.</p>
+
+<h2 id="raidrive" class="title">
+    <a href="#raidrive">RaiDrive</a>
+</h2>
+
+<p>지금까지는 <strong>WinFsp</strong>, <strong>SSHFS-Win</strong>, <strong>sshfs win manager</strong> 3개가 필요했지만 <strong>RaiDrive</strong> 하나로 더 많은 기능을 편하게 이용할 수 있다.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows10-sftp-drive/raidrive.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows10-sftp-drive/raidrive_hued1032ddbd2f67c0f950dd7c3600f3cb_36251_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="516"
+    
+    alt="raidrive.png"
+    >
+  </a>
+  
+</figure>
+
+<p><a class="link" href="https://www.raidrive.com/" target="_blank" rel="noopener">https://www.raidrive.com/</a></p>
+<p><strong>Raidrive</strong> 는 구글드라이브, 원드라이브, 드롭박스, 네이버 MYBOX, MEGA 등 클라우드를 내컴퓨터 디스크로 연결 시켜준다. + WebDAV, SFTP, FTP 포함.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/windows10-sftp-drive/features.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/windows10-sftp-drive/features_hu661e6bd0517f2988a32d59c4d5a17dab_45728_678x0_resize_q100_h2_box_3.webp"
+    width="678" height="351"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>사용가능한 무료 기능 22.08.27</figcaption>
+</figure>
+
+<p>무료버전 사용시 <strong>최대 8개 드라이브</strong>까지 추가할 수 있고 드라이브 목록,처음 프로그램 실행할 때 <strong>광고가 표시</strong>된다.</p>
+<p>유료버전 사용시 광고를 제거하는데 <strong>월 2$</strong> 읽기 가능한 저장소를 <strong>개당 월 $0.5</strong>로 판매하고 있기 때문에 추천하지는 않는다.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="0cbb22afa6063ed01aeaa8f620839b6a">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="0cbb22afa6063ed01aeaa8f620839b6a" 
+        data-page-url="https://nasoru.com/posts/windows10-sftp-drive/"
+        data-page-title="윈도우10 SFTP 네트워크 드라이브에 연결하기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/windows11-night-mode-error/">윈도우 야간모드 관련 오류 해결방법</a></li>
+        
+        <li><a href="/posts/taskbar-corner-overflow/">윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기</a></li>
+        
+        <li><a href="/posts/rmstart/">윈도우 작업 관리자에서 시작프로그램 완전히 제거하기</a></li>
+        
+        <li><a href="/posts/windows11-patch/">윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음</a></li>
+        
+        <li><a href="/posts/ear-trumpet/">윈도우10 간단하게 볼륨믹서 기능 사용하기 EarTrumpet</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

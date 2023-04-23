@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="xxx">
+<meta property="og:description"  content="xxx" />
+<meta property="og:title" content="Certbot 명령어 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/certbot/" />
+<meta property="og:site_name" content="Certbot 명령어" />
+
+<meta property="article:published_time" content="2022-07-10 22:26:46 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>Certbot 명령어 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">Certbot 명령어</h1>
+        <time datetime="2022-07-10T22:26:46&#43;0900">2022년 7월 10일 일요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/certbot">certbot</a></li>
+        
+        <li><a href="https://nasoru.com/tags/nginx">nginx</a></li>
+        
+        <li><a href="https://nasoru.com/tags/linux">linux</a></li>
+        
+        </ul>
+        
+        
+<h2 id="certbot-명령어" class="title">
+    <a href="#certbot-%eb%aa%85%eb%a0%b9%ec%96%b4">Certbot 명령어</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 인증서 확인</span>
+</span></span><span class="line"><span class="cl">certbot certificates
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 갱신 테스트</span>
+</span></span><span class="line"><span class="cl">certbot renew --dry-run
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 강제로 갱신</span>
+</span></span><span class="line"><span class="cl">certbot renew --force-renewal
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 갱신</span>
+</span></span><span class="line"><span class="cl">certbot renew
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 삭제</span>
+</span></span><span class="line"><span class="cl">apt-get remove certbot
+</span></span><span class="line"><span class="cl">dnf remove certbot
+</span></span><span class="line"><span class="cl">yum remove certbot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 설치</span>
+</span></span><span class="line"><span class="cl">sudo snap install --classic certbot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># certbot 확인</span>
+</span></span><span class="line"><span class="cl">sudo snap install --classic certbot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># nginx 구성 자동 편집</span>
+</span></span><span class="line"><span class="cl">sudo certbot --nginx
+</span></span></code></pre></div><p><a class="link" href="https://certbot.eff.org/" target="_blank" rel="noopener">https://certbot.eff.org/</a></p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="d0b2d5675213731ccf447af2dc423ffa">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="d0b2d5675213731ccf447af2dc423ffa" 
+        data-page-url="https://nasoru.com/posts/certbot/"
+        data-page-title="Certbot 명령어"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/screen-cmd/">리눅스 Screen 터미널 명령어/단축키</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

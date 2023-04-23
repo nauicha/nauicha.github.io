@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag2 on nasoru</title>
+    <link>https://nasoru.com/tags/tag2/</link>
+    <description>Recent content in tag2 on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 26 Nov 2022 14:01:50 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL2 wget: unable to resolve host address</title>
+      <link>https://nasoru.com/posts/wsl-resolv/</link>
+      <pubDate>Sat, 26 Nov 2022 14:01:50 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/wsl-resolv/</guid>
+      <description>Windows에서 VPN에 연결하면 Bash에서 네트워크 연결이 끊어진다고 한다. wget 설치 오류 wget: unable to resolve host address sudo nano /etc/wsl.conf resolv.conf resolv.conf 자동생성방지 [network] generateResolvConf = false wsl.conf 에 추가. Ctrl + x 로 저장. wsl --shutdown wsl powershell 에서 wsl 종료 후 다시시작. resolv.conf sudo nano /etc/resolv.conf nameserver 8.8.8.8 resolv.conf 에 추가. https://learn.microsoft.com/ko-kr/windows/wsl/troubleshooting#wsl-has-no-network-connectivity-once-connected-to-a-vpn</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on nasoru</title>
+    <link>https://nasoru.com/tags/windows/</link>
+    <description>Recent content in windows on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 22 Jul 2022 12:29:08 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>윈도우 야간모드 관련 오류 해결방법</title>
+      <link>https://nasoru.com/posts/windows11-night-mode-error/</link>
+      <pubDate>Fri, 22 Jul 2022 12:29:08 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/windows11-night-mode-error/</guid>
+      <description>윈도우 11 야간모드가 비활성화인데도 노란 화면으로 적용되어 있어서 검색해 보았다. 야간모드 오류로 켜지지 않거나 꺼지지 않는 등의 오류 해결법으로 관련 레지스트리를 삭제하는 방법으로 해결했다. 레지스트리 편집기로 야간모드 오류 해결하기 컴퓨터\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CloudStore\Store\DefaultAccount\C</description>
+    </item>
+    
+    <item>
+      <title>윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기</title>
+      <link>https://nasoru.com/posts/taskbar-corner-overflow/</link>
+      <pubDate>Tue, 19 Jul 2022 00:24:54 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/taskbar-corner-overflow/</guid>
+      <description>모서리 오버플로 아이콘 윈도우에서는 작업표시줄 우측 모서리에 화살표안 메뉴로 숨겨지지 않는 아이콘을 설정할 수 있다. 나는 주로 트레이 아이콘 우클릭 메뉴를 자주 사용하는 프로그램이나 실행중인 것을 확인하는 용도로 사용한다. 작업 표시줄 설정 모서리 오버플로 아이콘을 사용하기 위한 작업 표시줄 설정. 이미 삭제된 프로그램의 아이콘이 남아있다. ex) OneDrive, Teams 파일 다운로드 | 출처 corner_icon_cache.bat :: Created by: Shawn Brink :: Created on: June 29, 2021 :: Tutorial: https://www.elevenforum.com/t/reset-taskbar-corner-notification-icons-in-windows-11.247/ @echo off set regPath=HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify set regKey1=IconStreams set regKey2=PastIconsStream echo. echo The explorer process must be temporarily killed before deleting your taskbar corner overflow notification</description>
+    </item>
+    
+    <item>
+      <title>윈도우 작업 관리자에서 시작프로그램 완전히 제거하기</title>
+      <link>https://nasoru.com/posts/rmstart/</link>
+      <pubDate>Fri, 15 Jul 2022 00:17:54 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/rmstart/</guid>
+      <description>윈도우 작업 관리자에서 시작프로그램을 관리할 때 이미 삭제했던 프로그램이나 사용하지 않는 프로그램, Program 을 완전히 제거하기 위한 방법이다. 사용안함 이 아니라 시작프로그램 목록에서 완전히 제거. 작업 관리자 작업 관리자에서 분류방법을 우클릭해서 선택할 수 있는데 명령줄을 선택해서 제거할 시작프로그램의 명령줄이 필요. 레지스트리 편집기 Win + R regedit 또는 윈도우 검색 레지스트리 편집기 실행. 컴퓨터\HKEY_LOCAL_MACHINE\SOFTWARE\</description>
+    </item>
+    
+    <item>
+      <title>윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음</title>
+      <link>https://nasoru.com/posts/windows11-patch/</link>
+      <pubDate>Sat, 09 Jul 2022 17:57:36 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/windows11-patch/</guid>
+      <description>현재 설치된 버전 윈도우11 22000.778 아래 모든 설정은 개인적으로 생각했을 때 불편했던 부분들을 개선한 방법이다. 윈도우10을 포기하지 못한 것인지도 모른다. 파일 탐색기 탭 기능 기다리는중. ExplorerPatcher ExplorerPatcher 프로젝트 페이지. 작업 표시줄, 시스템 트레이, 파일 탐색기, 시작 메뉴등 윈도우 작업환경 개선을 목표로 하는 프로젝트. 내가 원하던 기능이 모여있다. 파일 탐색기 둥근모서리를 각진모서리로 변경(창테두리만 적용). 개인적으로 둥근 모서리의 여백이 마음에 들지 않아 변경.</description>
+    </item>
+    
+    <item>
+      <title>윈도우10 간단하게 볼륨믹서 기능 사용하기 EarTrumpet</title>
+      <link>https://nasoru.com/posts/ear-trumpet/</link>
+      <pubDate>Thu, 03 Mar 2022 15:52:10 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/ear-trumpet/</guid>
+      <description>윈도우10에서 프로그램 별로 볼륨을 조절할 수 있는 볼륨 믹서를 열려면 트레이아이콘 우클릭을하고 볼륨 믹서를 선택해야 조절할 수 있는 창이 표시된다. 윈도우 10 기본 EarTrumpet EarTrumpet 은 위와 같은 과정을 생략하고 트레이 아이콘 클릭 한번으로 볼륨믹서까지 포함된 창을 보여준다. 추가 기능으로는 단축키로도 표시할 수 있다. EarTrumpet 마이크로소프트 스토어에서 다운로드. https://www.microsoft.com/store/productId/9NBLGGH516XP 작업 표시줄 우클릭 &amp;gt; 작업 표시줄 설정 작업 표시줄에 표시할 아이콘 선택으로 기존 윈도우10 볼륨아이콘을 숨기고 EarTrumpet 볼</description>
+    </item>
+    
+    <item>
+      <title>윈도우10 SFTP 네트워크 드라이브에 연결하기</title>
+      <link>https://nasoru.com/posts/windows10-sftp-drive/</link>
+      <pubDate>Mon, 24 Jan 2022 03:45:42 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/windows10-sftp-drive/</guid>
+      <description>원격 디렉토리를 윈도우10 탐색기에 마운트하는 방법. VSCode Remote-SSH 확장은 서버에 VS Code server (최소 1GM RAM, 2 CPU cores 필요) 를 설치하는 대신 네트워크 드라이브로 마운트하고 간단한 작업폴더로 사용하기 위해 알아보았다. 터미널은 CMD OpenSSH 연결해서 사용. (윈도우10 선택적 기능에 포함된 OpenSSH 클라이언트 필요) ssh username@100.100.100.100 -i ~/.ssh/path ssh 키파일로 연결. -i ssh -L 1313:100.100.100.100:1313 username@100.100.100.100 -i ~/.ssh/path ssh 포트 1313 연결 추가. -L 준비물 설정 &amp;gt; 앱 및 기능 &amp;gt; 선택적 기능 OpenSSH 클라이언트 윈도우10 선택적 기능 WinFsp, https://github.com/billziss-gh/winfsp/releases/ SSHFS-Win, https://github.com/billziss-gh/sshfs-win/releases/ WinFsp, SSHFS-Win latest 최신버전 설치. 사</description>
+    </item>
+    
+    <item>
+      <title>윈도우10 LTSC MS 스토어 설치하기</title>
+      <link>https://nasoru.com/posts/ltsc-ms-store/</link>
+      <pubDate>Thu, 20 Jan 2022 22:46:15 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/ltsc-ms-store/</guid>
+      <description>Microsoft 스토어 설치 윈도우 10 Enterprise LTSC (Long-term-Servicing-Channel) 에서는 윈도우에서 기본적으로 제공하는 앱과 MS 스토어등이 없는데 설치하는 방법. 테스트 환경 Windows 10 Enterprise LTSC 21H2 build 19044.1466 다운로드 https://github.com/kkkgo/LTSC-Add-MicrosoftStore/releases 관리자 권한으로 실행. DesktopAppInstaller / StorePurchaseApp / XboxIdentityProvider 포함됩니다. 설치를 원하지 않으면 각각의 appxbundle 삭제 오류가 나면 컴퓨터 다시시작 후 재시도. (윈도우 설치 후 처음 실행했을 때 오류, 재부팅 후 정상설치) 설치, 실행 테스트 완료. 캡처, 클립보드 기능 LSTC 에서는 Win + Shift + S 캡처 기능, Win + v 클립보드 기능이 작동하지 않습니다. MS 스토</description>
+    </item>
+    
+    <item>
+      <title>USB 없이 윈도우 10 포맷하기</title>
+      <link>https://nasoru.com/posts/windows-disk-install/</link>
+      <pubDate>Sun, 02 May 2021 18:52:58 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/windows-disk-install/</guid>
+      <description>시작하기 전 USB 없이 윈도우 10 포맷하는 방법이다. 8GB 이상인 비어있는 파티션이 필요하다. 네이버에 &amp;ldquo;윈도우 10 파티션 나누기&amp;rdquo; 검색. 현재 윈도우가 설치되지 않은 디스크 윈도우10 ISO 파일을 다운받아 압축을 푼다. Microsoft 공식 홈페이지에서 ISO파일을 다운받을 수 있다. 나는 반디집으로 압축 품. 윈도우10 USB 없이 포맷 윈도우10_하드설치.cmd 구글 드라이브 다운로드 링크 21/09/23 링크 재생성 위 스크린샷과 같이 boot 폴더와 sources 폴더만 비어있는 파</description>
+    </item>
+    
+    <item>
+      <title>윈도우10 hugo 블로그 만들기</title>
+      <link>https://nasoru.com/posts/hugo-windows/</link>
+      <pubDate>Mon, 01 Feb 2021 20:33:40 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/hugo-windows/</guid>
+      <description>깃허브저장소를 이용해 깃허브페이지 또는 Netlify 로 호스팅을 하려면 Git 윈도우버전을 설치해야한다. hugo 설치 Releases 페이지에서 다운로드. 다운받은 압축파일 폴더이름을 hugo로 바꾸어서 원하는 경로에 풀기. C:\hugo\bin 버전 업데이트 할 때는 hugo.exe 파일만 바꿔주면 된다. 환경변수 편집은 설정 &amp;gt; 시스템 &amp;gt; 정보 &amp;gt; 고급 시스템 설정 사용자 변수 Path 에 hugo 다운받은 경로를 새로 만들기로 추가한다. 설치 확인 hugo version 으로 설치 확인할 수 있다. 프로젝트 시작하기 hugo new site &amp;lt;이름&amp;gt; hugo 프로젝트</description>
+    </item>
+    
+  </channel>
+</rss>

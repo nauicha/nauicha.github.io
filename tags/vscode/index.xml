@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vscode on nasoru</title>
+    <link>https://nasoru.com/tags/vscode/</link>
+    <description>Recent content in vscode on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 04 Nov 2022 10:13:38 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode 이전 작업폴더 기억하지 않고 기본 시작화면 사용하기</title>
+      <link>https://nasoru.com/posts/vscode-start-page/</link>
+      <pubDate>Fri, 04 Nov 2022 10:13:38 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/vscode-start-page/</guid>
+      <description>비주얼 스튜디오 코드에서는 창을 닫고 열면 이전에 작업하던 작업폴더를 기억하고 가져온다. ssh 원격폴더로 주로 사용하는데 딜레이도 있고 해서 빈창에 시작화면으로 설정. 파일 &amp;gt; 기본 설정 &amp;gt; 설정 설정에서 restore windows 검색하면 관련 설정을 빠르게 찾을 수 있다. 설정 단축키는 Ctrl + , Windows: Restore Windows 처음 시작한 후 창이 다시 열리는 방식을 제어합니다. 이 설정은 애플리케이션이 이미 실행 중인 경우에는 아무런 영향을 주지 않습니다. all(기본값) 폴더, 작업 영역 또는 파일이 열려 있지 않은</description>
+    </item>
+    
+    <item>
+      <title>VSCode 작업폴더 시작시 명령 실행하기</title>
+      <link>https://nasoru.com/posts/vscode-startup-task/</link>
+      <pubDate>Sat, 29 Jan 2022 06:14:35 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/vscode-startup-task/</guid>
+      <description>비주얼 스튜디오 코드 시작시 실행할 명령, 시작 작업 설정. Ctrl + Shift + P 작업폴더에서 .vscode/tasks.json 파일 생성하기. tasks.json 작업 설정하기 { // See https://go.microsoft.com/fwlink/?LinkId=733558 // for the documentation about the tasks.json format &amp;#34;version&amp;#34;: &amp;#34;2.0.0&amp;#34;, &amp;#34;tasks&amp;#34;: [ { &amp;#34;label&amp;#34;: &amp;#34;ssh&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;shell&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;ssh nasoru@xxx.xxx.xxx.xxx&amp;#34;, &amp;#34;windows&amp;#34;: { &amp;#34;command&amp;#34;: &amp;#34;ssh nasoru@xxx.xxx.xxx.xxx&amp;#34; }, &amp;#34;presentation&amp;#34;: { &amp;#34;reveal&amp;#34;: &amp;#34;always&amp;#34;, &amp;#34;panel&amp;#34;: &amp;#34;new&amp;#34;, &amp;#34;clear&amp;#34;: true, &amp;#34;focus&amp;#34;: true, }, &amp;#34;runOptions&amp;#34;: { &amp;#34;runOn&amp;#34;: &amp;#34;folderOpen&amp;#34;, } } ] } command 터미널 시작시 실행할 명령 windows 윈도우 운영체제 사용시 기본속성 대신 사용. 사용해야 정상작동해서 사용. presentaion 사용자 인터페이스에서 작업 출력이 처리되는 방식 reveal always(기본) | never | silent 통합 터미널 패널을 앞으로 가져올지 여부 panel</description>
+    </item>
+    
+    <item>
+      <title>VSCode Remote SSH 원격서버 연결하기</title>
+      <link>https://nasoru.com/posts/vscode-remote-ssh/</link>
+      <pubDate>Sat, 15 Jan 2022 01:40:53 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/vscode-remote-ssh/</guid>
+      <description>Remote SSH 비주얼스튜디오코드 VSCode에서 SSH 원격 접속 방법. 탐색기 + 에디터 + 터미널 사용가능. Ctrl + Shift + P 로 ssh 검색 또는 창 왼쪽 아래 초록색 &amp;gt;&amp;lt; 아이콘 사용. Remote-SSH:Connect to Host&amp;hellip; &amp;gt; Configure SSH Hosts&amp;hellip; nasoru는 미리 만들어둔 세션. 기본으로 선택할 수 있는 config 경로는 C:\Users\사용자이름\.ssh\config # Read more about SSH config files: https://linux.die.net/man/5/ssh_config Host 호스트 세션 별칭 HostName 호스트 이름 (IP주소) User 사용자 이름 Port 포트 지정 (기본 22) IdentityFile 개인키 저장 파일 위치 Host node-vm HostName &amp;lt;vm address&amp;gt; User sana Port 5522 IdentityFile ~/.ssh/id_node_vm 세션 여러</description>
+    </item>
+    
+  </channel>
+</rss>

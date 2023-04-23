@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="파이썬 아나콘더 명령어 모음">
+<meta property="og:description"  content="파이썬 아나콘더 명령어 모음" />
+<meta property="og:title" content="파이썬 아나콘다 anaconda 명령어 정리 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/anaconda-command/" />
+<meta property="og:site_name" content="파이썬 아나콘다 anaconda 명령어 정리" />
+
+<meta property="article:published_time" content="2021-11-15 19:28:45 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>파이썬 아나콘다 anaconda 명령어 정리 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">파이썬 아나콘다 anaconda 명령어 정리</h1>
+        <time datetime="2021-11-15T19:28:45&#43;0900">2021년 11월 15일 월요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/python">python</a></li>
+        
+        <li><a href="https://nasoru.com/tags/anaconda">anaconda</a></li>
+        
+        </ul>
+        
+        
+<h2 id="아나콘다-명령어-정리" class="title">
+    <a href="#%ec%95%84%eb%82%98%ec%bd%98%eb%8b%a4-%eb%aa%85%eb%a0%b9%ec%96%b4-%ec%a0%95%eb%a6%ac">아나콘다 명령어 정리</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 아나콘다 버전 확인</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 아나콘다 업데이트</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">update</span> <span class="o">-</span><span class="n">n</span> <span class="n">base</span> <span class="n">conda</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">update</span> <span class="o">--</span><span class="nb">all</span>
+</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 아나콘다 가상환경 생성</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">가상환경이름</span> <span class="n">설치할패키지</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">가상환경이름</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.9</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성한 가상환경 리스트 확인</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">info</span> <span class="o">--</span><span class="n">envs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 가상환경 활성화</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">activate</span> <span class="n">가상환경이름</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 가상환경 비활설화</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">deactivate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 가상환경 정보</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">info</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 패키지 설치</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">install</span> <span class="n">패키지이름</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 설치된 패키지 리스트 확인</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="nb">list</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 가상환경 삭제</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">remove</span> <span class="o">--</span><span class="n">name</span> <span class="n">가상환경이름</span> <span class="o">--</span><span class="nb">all</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="n">가상환경이름</span> <span class="o">--</span><span class="nb">all</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 패키지만 삭제</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="n">가상환경이름</span> <span class="n">패키지이름</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 캐시 삭제</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">clean</span> <span class="o">-</span><span class="nb">all</span>
+</span></span></code></pre></div>
+<h2 id="pytorch-설치" class="title">
+    <a href="#pytorch-%ec%84%a4%ec%b9%98">pytorch 설치</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># cuda 버전 확인</span>
+</span></span><span class="line"><span class="cl"><span class="n">nvidia</span><span class="o">-</span><span class="n">smi</span>
+</span></span></code></pre></div><p>
+
+
+
+
+<figure>
+  
+  <a href="/posts/anaconda-command/pytorch.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/anaconda-command/pytorch_hu6435eabe4ba3f66b296ee0f46581e6f4_15843_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="298"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>설치가능한 CUDA버전</figcaption>
+</figure>
+
+<a class="link" href="https://pytorch.kr/" target="_blank" rel="noopener">https://pytorch.kr/</a></p>
+<p>cuda 설치 <a class="link" href="https://deepflowest.tistory.com/338" target="_blank" rel="noopener">https://deepflowest.tistory.com/338</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip3</span> <span class="n">install</span> <span class="n">torch</span> <span class="n">torchvision</span> <span class="n">torchaudio</span> <span class="o">--</span><span class="n">extra</span><span class="o">-</span><span class="n">index</span><span class="o">-</span><span class="n">url</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">pytorch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">whl</span><span class="o">/</span><span class="n">cu113</span>
+</span></span></code></pre></div>
+<h2 id="주피터-노트북" class="title">
+    <a href="#%ec%a3%bc%ed%94%bc%ed%84%b0-%eb%85%b8%ed%8a%b8%eb%b6%81">주피터 노트북</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># jupyter notebook 설치</span>
+</span></span><span class="line"><span class="cl"><span class="n">conda</span> <span class="n">install</span> <span class="n">jupyter</span> <span class="n">notebook</span>
+</span></span></code></pre></div>
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="ebcb9301e3d6280e8e119977a04fe6c1">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="ebcb9301e3d6280e8e119977a04fe6c1" 
+        data-page-url="https://nasoru.com/posts/anaconda-command/"
+        data-page-title="파이썬 아나콘다 anaconda 명령어 정리"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/omp-error-15/">OMP: Error #15 The kernel appears to have died. It will restart automatically. 해결 방법</a></li>
+        
+        <li><a href="/posts/jupyter-notebook-startdir/">주피터 노트북 Jupyter Notebook 시작 작업폴더 지정하기</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

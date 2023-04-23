@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google on nasoru</title>
+    <link>https://nasoru.com/tags/google/</link>
+    <description>Recent content in google on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Fri, 07 Jan 2022 08:20:31 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>구글 어시스턴트 비활성화, 디바이스 도우미 앱 끄기</title>
+      <link>https://nasoru.com/posts/disable-google-assistant/</link>
+      <pubDate>Fri, 07 Jan 2022 08:20:31 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/disable-google-assistant/</guid>
+      <description>Google 어시스턴트 사용하지 않는데도 홈 버튼을 길게 눌렀을 때 화면을 가리는 등 불편한 점이 많아 찾아보았습니다. 디바이스 도우미 기본 앱으로 설정된 구글 어시스턴트를 끄는 방법입니다. 디바이스 도우미 앱 끄기 설정 &amp;gt; 어플리케이션 &amp;gt; 기본 앱 선택 &amp;gt; 디지털 어시스턴트 앱 디바이스 도우미 앱 바꾸기 디바이스 도우미 앱 , 없음으로 선택. 홈 버튼을 길게 눌러도 반응하지 않습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

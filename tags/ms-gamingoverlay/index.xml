@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ms-gamingoverlay on nasoru</title>
+    <link>https://nasoru.com/tags/ms-gamingoverlay/</link>
+    <description>Recent content in ms-gamingoverlay on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 26 Nov 2022 19:09:18 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/ms-gamingoverlay/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>앱을 다운로드하여 이 &#39;ms-gamingoverlay&#39; 링크를 여세요 비활성화하기</title>
+      <link>https://nasoru.com/posts/msgamingoverlay/</link>
+      <pubDate>Sat, 26 Nov 2022 19:09:18 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/msgamingoverlay/</guid>
+      <description>앱을 다운로드하여 이 &amp;#39;ms-gamingoverlay&amp;#39; 링크를 여세요 위 팝업은 윈도우 11 에서 뜨는 팝업. 컨트롤러에서 이 버튼을 사용하여 Xbox Game Bar 열기 설정 &amp;gt; 게임 &amp;gt; Xbox Game Bar 끄기 윈도우 10 에서는 설정을 끄면 보이지 않았지만 윈도우 11에서 기본으로 설치된 Xbox 관련앱을 삭제하면 설정을 꺼도 제거되지 않는데 아래 방법으로 제거 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\GameDVR] &amp;#34;AppCaptureEnabled&amp;#34; = dword:00000000 AppCaptureEnabled.reg 레지스트리 편집기로 위 경로에 dword 값 추가</description>
+    </item>
+    
+  </channel>
+</rss>

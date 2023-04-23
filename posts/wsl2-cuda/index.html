@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="WSL2 Cuda &#43; Anaconda &#43; Pytorch 딥러닝 환경 설치방법.">
+<meta property="og:description"  content="WSL2 Cuda &#43; Anaconda &#43; Pytorch 딥러닝 환경 설치방법." />
+<meta property="og:title" content="WSL2에서 Cuda &#43; Pytorch 설치하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/wsl2-cuda/" />
+<meta property="og:site_name" content="WSL2에서 Cuda &#43; Pytorch 설치하기" />
+
+<meta property="article:published_time" content="2022-11-26 13:38:03 &#43;0900 KST" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>WSL2에서 Cuda &#43; Pytorch 설치하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">WSL2에서 Cuda + Pytorch 설치하기</h1>
+        <time datetime="2022-11-26T13:38:03&#43;0900">2022년 11월 26일 토요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/wsl">wsl</a></li>
+        
+        <li><a href="https://nasoru.com/tags/cuda">cuda</a></li>
+        
+        </ul>
+        
+        
+<h2 id="wsl2-설치" class="title">
+    <a href="#wsl2-%ec%84%a4%ec%b9%98">WSL2 설치</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="p">-</span><span class="n">-install</span>
+</span></span></code></pre></div>
+<h2 id="cuda-설치" class="title">
+    <a href="#cuda-%ec%84%a4%ec%b9%98">Cuda 설치</a>
+</h2>
+
+<p>윈도우에서 최신 NVIDIA 그래픽드라이버 다운로드.</p>
+<p><a class="link" href="https://www.nvidia.com/Download/index.aspx?lang=en-us" target="_blank" rel="noopener">https://www.nvidia.com/Download/index.aspx?lang=en-us</a></p>
+
+<h2 id="cuda-toolkit-설치" class="title">
+    <a href="#cuda-toolkit-%ec%84%a4%ec%b9%98">Cuda toolkit 설치</a>
+</h2>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-key del 7fa2af80
+</span></span></code></pre></div>
+
+
+
+
+<figure>
+  
+  <a href="/posts/wsl2-cuda/cuda1.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/wsl2-cuda/cuda1_hub275d546bd45280966e079aaf2b9537b_13815_540x0_resize_q100_h2_box_3.webp"
+    width="540" height="225"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>설치할 cuda 버전선택</figcaption>
+</figure>
+
+<p><a class="link" href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-toolkit-archive</a></p>
+<p>Pytorch에서 지원하는 cuda 최신버전 11.7.1 을 선택.</p>
+<p>Select Target Platform 에서 <strong>Linux &gt; x86_64 &gt; WSL_Ubuntu &gt; 2.0 &gt; deb(local)</strong> 선택</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+</span></span><span class="line"><span class="cl">sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+</span></span><span class="line"><span class="cl">wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda-repo-wsl-ubuntu-11-7-local_11.7.1-1_amd64.deb
+</span></span><span class="line"><span class="cl">sudo dpkg -i cuda-repo-wsl-ubuntu-11-7-local_11.7.1-1_amd64.deb
+</span></span></code></pre></div><p>위 명령어를 실행하면 나오는 명령어</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">To install the key, run this command:
+</span></span><span class="line"><span class="cl">sudo cp /var/cuda-repo-wsl-ubuntu-11-7-local/cuda-96193861-keyring.gpg /usr/share/keyrings/
+</span></span></code></pre></div><p>실행</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get -y install cuda
+</span></span></code></pre></div>
+<h2 id="cudnn-설치" class="title">
+    <a href="#cudnn-%ec%84%a4%ec%b9%98">cuDNN 설치</a>
+</h2>
+
+<p><a class="link" href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download</a></p>
+<p>11.x 버전에 맞는 v8.6.0 설치 nvidia 로그인 필요.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/wsl2-cuda/cudnn.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/wsl2-cuda/cudnn_hu8e250af07100dcb5d69d114d65a7e3c4_19673_644x0_resize_q100_h2_box_3.webp"
+    width="644" height="357"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>wget 링크 복사</figcaption>
+</figure>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget &lt;복사한 링크&gt;
+</span></span><span class="line"><span class="cl">tar -xvf cudnn-linux-x86_64-8.6.0.163_cuda11-archive.tar.xz <span class="c1"># 다운로드 받은 파일 이름</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cp cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include 
+</span></span><span class="line"><span class="cl">sudo cp -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64 
+</span></span><span class="line"><span class="cl">sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+</span></span></code></pre></div>
+<h2 id="아나콘다-설치" class="title">
+    <a href="#%ec%95%84%eb%82%98%ec%bd%98%eb%8b%a4-%ec%84%a4%ec%b9%98">아나콘다 설치</a>
+</h2>
+
+<p><a class="link" href="https://www.anaconda.com/products/distribution" target="_blank" rel="noopener">https://www.anaconda.com/products/distribution</a></p>
+<p>링크 주소 복사해서 wget 다운로드</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl">bash Anaconda3-2022.10-Linux-x86_64.sh <span class="c1"># 다운로드 받은 파일 이름</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 설치진행 yes / enter</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>~/anaconda3/bin:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">conda create -n pytorch <span class="nv">python</span><span class="o">=</span>3.9 <span class="c1"># conda 가상환경 생성 / 가상환경 이름 pytorch</span>
+</span></span><span class="line"><span class="cl">conda activate pytorch
+</span></span></code></pre></div>
+<h2 id="pytorch-설치" class="title">
+    <a href="#pytorch-%ec%84%a4%ec%b9%98">Pytorch 설치</a>
+</h2>
+
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/wsl2-cuda/pytorch.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/wsl2-cuda/pytorch_hu777dd32dd82a3227d893e351b8732d7c_23428_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="259"
+    
+    alt=""
+    >
+  </a>
+  <figcaption>버전 선택</figcaption>
+</figure>
+
+<p><a class="link" href="https://pytorch.org/get-started/locally/" target="_blank" rel="noopener">https://pytorch.org/get-started/locally/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip3 install torch torchvision torchaudio
+</span></span></code></pre></div><p>설치한 CUDA 버전에 맞게 선택 후 설치</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">python</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">exit</span><span class="p">()</span>
+</span></span></code></pre></div><p>Pytorch GPU 체크.</p>
+
+<h2 id="libcudnn_cnn_inferso8-error" class="title">
+    <a href="#libcudnn_cnn_inferso8-error">libcudnn_cnn_infer.so.8. Error</a>
+</h2>
+
+<p>Could not load library libcudnn_cnn_infer.so.8. Error: libcuda.so: cannot open shared object file: No such file or directory</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/lib/wsl/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</span></span></code></pre></div><p>.bashrc 파일에 추가</p>
+
+<h2 id="참고" class="title">
+    <a href="#%ec%b0%b8%ea%b3%a0">참고</a>
+</h2>
+
+<ul>
+<li><a class="link" href="https://docs.nvidia.com/cuda/wsl-user-guide/index.html" target="_blank" rel="noopener">https://docs.nvidia.com/cuda/wsl-user-guide/index.html</a></li>
+<li><a class="link" href="https://learn.microsoft.com/ko-kr/windows/ai/directml/gpu-cuda-in-wsl" target="_blank" rel="noopener">https://learn.microsoft.com/ko-kr/windows/ai/directml/gpu-cuda-in-wsl</a></li>
+<li><a class="link" href="https://docs.nvidia.com/cuda/wsl-user-guide/index.html" target="_blank" rel="noopener">https://docs.nvidia.com/cuda/wsl-user-guide/index.html</a></li>
+<li><a class="link" href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/" target="_blank" rel="noopener">https://docs.nvidia.com/deeplearning/cudnn/install-guide/</a></li>
+</ul>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="b95f78f2374f5c00d34f440e1b2a7149">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="b95f78f2374f5c00d34f440e1b2a7149" 
+        data-page-url="https://nasoru.com/posts/wsl2-cuda/"
+        data-page-title="WSL2에서 Cuda &#43; Pytorch 설치하기"></div>
+    </div>
+    
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

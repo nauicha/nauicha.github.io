@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on nasoru</title>
+    <link>https://nasoru.com/tags/nginx/</link>
+    <description>Recent content in nginx on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 10 Jul 2022 22:26:46 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certbot 명령어</title>
+      <link>https://nasoru.com/posts/certbot/</link>
+      <pubDate>Sun, 10 Jul 2022 22:26:46 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/certbot/</guid>
+      <description>Certbot 명령어 # 인증서 확인 certbot certificates # 갱신 테스트 certbot renew --dry-run # 강제로 갱신 certbot renew --force-renewal # 갱신 certbot renew # 삭제 apt-get remove certbot dnf remove certbot yum remove certbot # 설치 sudo snap install --classic certbot # certbot 확인 sudo snap install --classic certbot # nginx 구성 자동 편집 sudo certbot --nginx https://certbot.eff.org/</description>
+    </item>
+    
+  </channel>
+</rss>

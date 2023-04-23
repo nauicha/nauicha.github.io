@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wsl on nasoru</title>
+    <link>https://nasoru.com/tags/wsl/</link>
+    <description>Recent content in wsl on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sat, 26 Nov 2022 13:38:03 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL2에서 Cuda &#43; Pytorch 설치하기</title>
+      <link>https://nasoru.com/posts/wsl2-cuda/</link>
+      <pubDate>Sat, 26 Nov 2022 13:38:03 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/wsl2-cuda/</guid>
+      <description>WSL2 설치 wsl --install Cuda 설치 윈도우에서 최신 NVIDIA 그래픽드라이버 다운로드. https://www.nvidia.com/Download/index.aspx?lang=en-us Cuda toolkit 설치 sudo apt-key del 7fa2af80 설치할 cuda 버전선택 https://developer.nvidia.com/cuda-toolkit-archive Pytorch에서 지원하는 cuda 최신버전 11.7.1 을 선택. Select Target Platform 에서 Linux &amp;gt; x86_64 &amp;gt; WSL_Ubuntu &amp;gt; 2.0 &amp;gt; deb(local) 선택 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600 wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda-repo-wsl-ubuntu-11-7-local_11.7.1-1_amd64.deb sudo dpkg -i cuda-repo-wsl-ubuntu-11-7-local_11.7.1-1_amd64.deb 위 명령어를 실행하면 나오는 명령어 To install the key, run this command: sudo cp /var/cuda-repo-wsl-ubuntu-11-7-local/cuda-96193861-keyring.gpg /usr/share/keyrings/ 실행 sudo apt-get update sudo apt-get -y install cuda cuDNN 설치 https://developer.nvidia.com/rdp/cudnn-download 11.x 버전에 맞는 v8.6.0 설치 nvidia 로그인 필요. wget 링크 복사 wget &amp;lt;복사한 링크&amp;gt; tar -xvf cudnn-linux-x86_64-8.6.0.163_cuda11-archive.tar.xz # 다운로드 받은 파일 이름 sudo cp cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include sudo cp -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64 sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*</description>
+    </item>
+    
+  </channel>
+</rss>

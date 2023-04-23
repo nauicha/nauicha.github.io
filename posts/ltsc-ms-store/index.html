@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="index,follow">
+<meta name="author" content="nasoru">
+<meta name="description" content="윈도우 10 LTSC MS 스토어, 캡처 클립보드 기능 사용하기">
+<meta property="og:description"  content="윈도우 10 LTSC MS 스토어, 캡처 클립보드 기능 사용하기" />
+<meta property="og:title" content="윈도우10 LTSC MS 스토어 설치하기 | nasoru">
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nasoru.com/posts/ltsc-ms-store/" />
+<meta property="og:site_name" content="윈도우10 LTSC MS 스토어 설치하기" />
+
+<meta property="article:published_time" content="2022-01-20 22:46:15 &#43;0000 UTC" />
+
+<meta name="theme-color" content="#367cab"/>
+<title>윈도우10 LTSC MS 스토어 설치하기 | nasoru</title>
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="stylesheet" href="/main.min.css">
+</head>
+  <body>
+    <div class="container">
+      <div class="box"><header>
+    <div class="main-head">
+        <a class="brand" href="/" title="홈">nasoru</a>
+        <p class="desc">나만의 온라인 메모장.</p>
+    </div>
+    <div class="main-menu">
+        <ul class="menu"><li><a href="/archives/" title="글 목록">archives</a></li><li><a href="/tags/" title="태그 목록">tags</a></li><li><a href="/test/" title="마크다운 테스트">test</a></li></ul>
+    </div>
+    <div class="main-search">
+        <form id="searchbar" action="/search/">
+            <input type="search" id="search-query" name="q" placeholder="검색어를 입력해주세요." autocomplete='off'>
+            <label for="search-query"></label>
+        </form>
+    </div>
+    <div class="adsense w730">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        
+        <ins class="adsbygoogle" style="display:inline-block;width:700px;height:120px" data-ad-client="ca-pub-4538511301600539" data-ad-slot="3385543529"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</header>
+<main>
+    <article id="post">
+        <h1 class="title">윈도우10 LTSC MS 스토어 설치하기</h1>
+        <time datetime="2022-01-20T22:46:15Z">2022년 1월 20일 목요일</time>
+        
+        <ul class="tags">
+        
+        <li><a href="https://nasoru.com/tags/windows">windows</a></li>
+        
+        </ul>
+        
+        
+<h2 id="microsoft-스토어-설치" class="title">
+    <a href="#microsoft-%ec%8a%a4%ed%86%a0%ec%96%b4-%ec%84%a4%ec%b9%98">Microsoft 스토어 설치</a>
+</h2>
+
+<p>윈도우 10 Enterprise LTSC (Long-term-Servicing-Channel) 에서는 윈도우에서 기본적으로 제공하는 앱과 MS 스토어등이 없는데 설치하는 방법.</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/ltsc-ms-store/start.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/ltsc-ms-store/start_hu43dabe8021230d1ac1dc99eab67b1d87_187254_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="431"
+    
+    alt="start.png"
+    >
+  </a>
+  
+</figure>
+
+<p>테스트 환경 Windows 10 Enterprise LTSC 21H2 build 19044.1466<br>
+다운로드 <a class="link" href="https://github.com/kkkgo/LTSC-Add-MicrosoftStore/releases" target="_blank" rel="noopener">https://github.com/kkkgo/LTSC-Add-MicrosoftStore/releases</a></p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/ltsc-ms-store/addstore.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/ltsc-ms-store/addstore_hu31a6330ee814fd3b944761e9a35f1f2b_161423_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="364"
+    
+    alt="addstore.png"
+    >
+  </a>
+  
+</figure>
+
+<p>관리자 권한으로 실행. DesktopAppInstaller / StorePurchaseApp / XboxIdentityProvider 포함됩니다.<br>
+설치를 원하지 않으면 각각의 appxbundle 삭제</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/ltsc-ms-store/storecmd.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/ltsc-ms-store/storecmd_huda4fab94e374390bbccbe817b5b12d3e_19351_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="360"
+    
+    alt="storecmd.png"
+    >
+  </a>
+  
+</figure>
+
+<p>오류가 나면 컴퓨터 다시시작 후 재시도. (윈도우 설치 후 처음 실행했을 때 오류, 재부팅 후 정상설치)</p>
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/ltsc-ms-store/complete.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/ltsc-ms-store/complete_hu4205d0504b999f0c565dfc7357fd10eb_780330_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="431"
+    
+    alt="complete.png"
+    >
+  </a>
+  
+</figure>
+
+<p>설치, 실행 테스트 완료.</p>
+
+<h2 id="캡처-클립보드-기능" class="title">
+    <a href="#%ec%ba%a1%ec%b2%98-%ed%81%b4%eb%a6%bd%eb%b3%b4%eb%93%9c-%ea%b8%b0%eb%8a%a5">캡처, 클립보드 기능</a>
+</h2>
+
+
+
+
+
+
+<figure>
+  
+  <a href="/posts/ltsc-ms-store/snip_clipboard.png" target='_blank' aria-label='image' title="원본이미지로 보기">
+    <img loading="lazy"
+    
+    src="/posts/ltsc-ms-store/snip_clipboard_hu6435d9557f52f36156ae7e071965883f_97349_690x0_resize_q100_h2_box_3.webp"
+    width="690" height="431"
+    
+    alt="snip_clipboard.png"
+    >
+  </a>
+  
+</figure>
+
+<p>LSTC 에서는 <kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> 캡처 기능, <kbd>Win</kbd> + <kbd>v</kbd> 클립보드 기능이 작동하지 않습니다. MS 스토어에서 캡처 및 스케치 앱을 설치.</p>
+
+    </article>
+    <div class="adsense multi-flex">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4538511301600539" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block;height:120px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-4538511301600539" data-ad-slot="5844984667"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+    <div id="comments" class="slide">
+        <strong class="title"><span data-cusdis-count-page-id="c9d6c316c71233b16319ad3a75892a9b">0</span> comments</strong>
+        <div id="cusdis_thread"
+        data-host="https://c.nasoru.com"
+        data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0"
+        data-page-id="c9d6c316c71233b16319ad3a75892a9b" 
+        data-page-url="https://nasoru.com/posts/ltsc-ms-store/"
+        data-page-title="윈도우10 LTSC MS 스토어 설치하기"></div>
+    </div>
+    
+    
+    <div id="related" class="slide">
+        <strong class="title">Related Posts</strong>
+        <ul>
+        
+        <li><a href="/posts/windows11-night-mode-error/">윈도우 야간모드 관련 오류 해결방법</a></li>
+        
+        <li><a href="/posts/taskbar-corner-overflow/">윈도우11 작업표시줄 모서리 오버플로 제거된 프로그램 아이콘 제거하기</a></li>
+        
+        <li><a href="/posts/rmstart/">윈도우 작업 관리자에서 시작프로그램 완전히 제거하기</a></li>
+        
+        <li><a href="/posts/windows11-patch/">윈도우11 애니메이션 제거, UI 패치, 최적화 개인설정 모음</a></li>
+        
+        <li><a href="/posts/ear-trumpet/">윈도우10 간단하게 볼륨믹서 기능 사용하기 EarTrumpet</a></li>
+        
+        </ul>
+    </div>
+    
+</main>
+<footer id="bottom">
+  <div class="credit">
+    <span>Copyright 2022 <a class="link" href="/" title="nasorucom@gmail.com">nasoru</a></span>. 
+    <span>built by <a class="link" href="https://gohugo.io/" title="hugo version">hugo 0.101.0</a></span>
+  </div>
+</footer>
+</div>
+    </div>
+
+
+
+
+<script async src="/js/single.min.js" ></script>
+
+<link rel="stylesheet" href="/syntax.min.css">
+<script async defer src="https://c.nasoru.com/js/cusdis.es.js"></script>
+<script defer data-host="https://c.nasoru.com"  data-app-id="c2b3b2d3-10ab-47d8-a896-cdda8a5a68e0" src="https://c.nasoru.com/js/cusdis-count.umd.js"></script>
+</body>
+</html>

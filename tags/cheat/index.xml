@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cheat on nasoru</title>
+    <link>https://nasoru.com/tags/cheat/</link>
+    <description>Recent content in cheat on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Thu, 23 Jun 2022 12:04:14 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/cheat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raft 1.0 정식출시 후 사용가능한 치트모음</title>
+      <link>https://nasoru.com/posts/raft-cheat/</link>
+      <pubDate>Thu, 23 Jun 2022 12:04:14 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/raft-cheat/</guid>
+      <description>최근에 Raft가 정식출시하면서 사용가능한 치트를 가져왔다. 아래 치트/모드들은 게임버전이 업데이트 되어도 적용이 되거나 업데이트가 빠르다. CheatEngine 필요한 치트 치트엔진 적용방법은 따로 설명X 구글검색. 명령어 입력창은 F10 CT 테이블 Update13 버전에서 파랗게 표시한 옵션들은 적용된다. CT파일 다운로드 SET_MAX_STATS 무적 NO_CRAFT_REQUIREMENT 망치 건설, 제작 재료 필요없음 (건축 필수) INSTANT_FISHING 즉시 낚시 INSTANT_COOKING 즉시 요리 UNLIMITED BATTERY 배터리 무제한 (v1 또는 v2 적용) ModLoader 필요한 치트 모드로더 설치, 모드 추가하는 방법 1. Item</description>
+    </item>
+    
+    <item>
+      <title>Raft 래프트 모드 적용하는 방법(치트)</title>
+      <link>https://nasoru.com/posts/raft-mod/</link>
+      <pubDate>Tue, 10 Aug 2021 04:01:44 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/raft-mod/</guid>
+      <description>Raft 스팀게임 숨겨진 업적 중에 비행기섬이랑 난파선섬 찾기를 할 때 사용. 모드로더를 실행하려면 스팀 Raft를 설치해야함. ModLoader 다운로드 Raft 모드로더 사이트에서 다운로드 받는다. 다운로드 받은 RMLLauncher.exe 을 실행하고 업데이트를 시켜준다. 모드로더 메인화면. UI가 잘려서 보임. 모드로더 Start 버튼으로 래프트를 실행해준다. 스팀에서 실행하면 안됨. 모드 적용하기 모드로더 홈페이지 모드목록 모드로더 홈페이지 ItemSpawner 이 글에서는 Raft ItemSpawner 라는 모드를 설치한다. 크롬으로 모드 페이지에</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on nasoru</title>
+    <link>https://nasoru.com/tags/linux/</link>
+    <description>Recent content in linux on nasoru</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Sun, 10 Jul 2022 22:26:46 +0900</lastBuildDate><atom:link href="https://nasoru.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certbot 명령어</title>
+      <link>https://nasoru.com/posts/certbot/</link>
+      <pubDate>Sun, 10 Jul 2022 22:26:46 +0900</pubDate>
+      
+      <guid>https://nasoru.com/posts/certbot/</guid>
+      <description>Certbot 명령어 # 인증서 확인 certbot certificates # 갱신 테스트 certbot renew --dry-run # 강제로 갱신 certbot renew --force-renewal # 갱신 certbot renew # 삭제 apt-get remove certbot dnf remove certbot yum remove certbot # 설치 sudo snap install --classic certbot # certbot 확인 sudo snap install --classic certbot # nginx 구성 자동 편집 sudo certbot --nginx https://certbot.eff.org/</description>
+    </item>
+    
+    <item>
+      <title>리눅스 Screen 터미널 명령어/단축키</title>
+      <link>https://nasoru.com/posts/screen-cmd/</link>
+      <pubDate>Fri, 18 Feb 2022 10:28:31 +0000</pubDate>
+      
+      <guid>https://nasoru.com/posts/screen-cmd/</guid>
+      <description>백그라운드에서 터미널을 실행. 연결 끊기지 않고 작업을 실행할 때 가상 터미널 생성. 실행중인 프로세스는 백그라운드에서 계속 실행됨. 설치 sudo apt update sudo apt install screen sudo yum install screen Ubuntu 에서 Screen 설치 CentOS 에서 Screen 설치 명령어 screen -version # screen 설치확인 Screen version 4.06.02 (GNU) 23-Oct-17 screen -S &amp;lt;이름&amp;gt; # 이름으로 터미널 세션 만들고 시작 screen -ls # 실행중인 세션 목록 screen -r &amp;lt;이름&amp;gt; # 분리된 세션으로 연결 screen -d &amp;lt;이름&amp;gt; # 세션 분리하기 screen -d -r &amp;lt;이름&amp;gt; # 연결된 세션 분리하</description>
+    </item>
+    
+  </channel>
+</rss>
