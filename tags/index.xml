@@ -107,24 +107,6 @@
     </item>
     
     <item>
-      <title>game</title>
-      <link>https://nasoru.com/tags/game/</link>
-      <pubDate>Sun, 28 Aug 2022 13:34:08 +0900</pubDate>
-      
-      <guid>https://nasoru.com/tags/game/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lostark</title>
-      <link>https://nasoru.com/tags/lostark/</link>
-      <pubDate>Sun, 28 Aug 2022 13:34:08 +0900</pubDate>
-      
-      <guid>https://nasoru.com/tags/lostark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>daum</title>
       <link>https://nasoru.com/tags/daum/</link>
       <pubDate>Wed, 24 Aug 2022 08:48:38 +0900</pubDate>
@@ -193,6 +175,15 @@
       <pubDate>Sun, 10 Jul 2022 22:26:46 +0900</pubDate>
       
       <guid>https://nasoru.com/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>game</title>
+      <link>https://nasoru.com/tags/game/</link>
+      <pubDate>Sun, 03 Jul 2022 00:19:57 +0900</pubDate>
+      
+      <guid>https://nasoru.com/tags/game/</guid>
       <description></description>
     </item>
     
